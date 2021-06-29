@@ -6,17 +6,23 @@ public class Test : MonoBehaviour
 {
     [SerializeField] float dmg;
     WaitForSeconds sc = new WaitForSeconds(1.0f);
+    WaitForEndOfFrame sf = new WaitForEndOfFrame();
+
+    [SerializeField] GameObject Enemy;
+    EnemyHP enemyHP;
     private void Start()
     {
         StartCoroutine(DamagedPlayer(dmg));
+         enemyHP = Enemy.GetComponent<EnemyHP>();
     }
 
     IEnumerator DamagedPlayer(float _dmg)
     {
         while(true)
         {
-            yield return sc;
+            yield return sf;
             PlayerSystem.Instance.PlayerHP.TakeDamage = _dmg;
+            enemyHP.TakeDamage = _dmg;
         }
     }
 }
