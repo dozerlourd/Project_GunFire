@@ -10,7 +10,7 @@ public class PlayerLootingWeapon : MonoBehaviour
 
     [Space(15)]
     [SerializeField] GameObject weaponInfoUICanvas;
-    [SerializeField] Image weaponInfoUIImage;
+    Image weaponInfoUIImage;
     private Image WeaponInfoUIImage
     {
         get
@@ -21,6 +21,11 @@ public class PlayerLootingWeapon : MonoBehaviour
     }
     [SerializeField] float UIPlusY;
     [SerializeField] bool ray;
+
+    private void Start()
+    {
+        weaponInfoUIImage = weaponInfoUICanvas.transform.GetChild(0).GetComponent<Image>();
+    }
 
     void Update()
     {
