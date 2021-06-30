@@ -29,8 +29,19 @@ public class PlayerLootingWeapon : MonoBehaviour
 
     void Update()
     {
+        SetRayVectorInfo();
+        DisplayWeaponUI();
+    }
+
+    void SetRayVectorInfo()
+    {
+        rayOriginVec = Camera.main.transform.position;
+        rayDirectionVec = Camera.main.transform.forward;
+    }
+
+    void DisplayWeaponUI()
+    {
         RaycastHit rayHitInfo;
-        SetrayVectorInfo();
 
         ray = Physics.Raycast(rayOriginVec, rayDirectionVec, out rayHitInfo, rayDist, LayerMask.GetMask("L_Weapon"));
 
@@ -41,18 +52,14 @@ public class PlayerLootingWeapon : MonoBehaviour
             InfoAndUI InfoAndUI = WeaponInfoUISystem.Instance.Arr_WeaponInfoUI[weaponNum - 1001];
 
             WeaponInfoUIImage.sprite = weaponNum == InfoAndUI.weaponNum ? InfoAndUI.WeaponInfoUIImage : null;
-            //weaponInfoUICanvas.transform.position = UIPos;
+            weaponInfoUICanvas.transform.position = UIPos;
             //weaponInfoUICanvas.transform.position = transform.position + transform.forward * 0.3f + transform.up * 0.05f;
+
+            if(Input.GetKeyDown(KeyCode.F)) WeaponSystem.Instance.ChangeWeapon(weaponNum);
         }
         else
         {
             WeaponInfoUIImage.sprite = null;
         }
-    }
-
-    void SetrayVectorInfo()
-    {
-        rayOriginVec = Camera.main.transform.position;
-        rayDirectionVec = Camera.main.transform.forward;
     }
 }
