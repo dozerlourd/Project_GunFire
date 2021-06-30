@@ -2319,6 +2319,7 @@ MonoBehaviour:
     E_WeaponType: 0
     attackDamage: 145
     maxAmmo: 9
+    currAmmo: 0
     reloadTime: 1.35
     rateOfFire: 3
     criticalRate: 10
@@ -2329,6 +2330,7 @@ MonoBehaviour:
     E_WeaponType: 0
     attackDamage: 23
     maxAmmo: 50
+    currAmmo: 0
     reloadTime: 1.5
     rateOfFire: 16
     criticalRate: 5
@@ -2339,8 +2341,9 @@ MonoBehaviour:
     E_WeaponType: 1
     attackDamage: 115
     maxAmmo: 8
+    currAmmo: 0
     reloadTime: 1.5
-    rateOfFire: 0.8
+    rateOfFire: 4
     criticalRate: 40
     criticalMultiflier: 350
     moveSpeedRate: 20
@@ -2349,6 +2352,7 @@ MonoBehaviour:
     E_WeaponType: 0
     attackDamage: 85
     maxAmmo: 30
+    currAmmo: 0
     reloadTime: 1.4
     rateOfFire: 9
     criticalRate: 12
@@ -2360,6 +2364,7 @@ MonoBehaviour:
     E_WeaponType: 0
     attackDamage: 0
     maxAmmo: 0
+    currAmmo: 0
     reloadTime: 0
     rateOfFire: 0
     criticalRate: 0
