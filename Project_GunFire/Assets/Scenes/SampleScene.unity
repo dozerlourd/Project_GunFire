@@ -1630,7 +1630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 7325656833484990784, guid: 0a691c07badbc324f9684cca58b11a1c, type: 3}
-  coolTime: 0.35
 --- !u!114 &1374267124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,8 +1661,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayDist: 16
   weaponInfoUICanvas: {fileID: 1554437772767996137}
+<<<<<<< HEAD
   weaponInfoUIImage: {fileID: 2743876609810547306}
   UIPlusY: 0.45
+=======
+  UIPlusY: 0.3
+>>>>>>> HCH_Branch
   ray: 0
 --- !u!1 &1489409551
 GameObject:
@@ -2319,6 +2322,7 @@ MonoBehaviour:
   - weaponName: Foundry
     weaponNum: 1001
     E_WeaponType: 0
+<<<<<<< HEAD
     attackDamage: 1
     maxAmmo: 10
     reloadTime: 1
@@ -2355,6 +2359,44 @@ MonoBehaviour:
     rateOfFire: 9
     criticalRate: 0
     criticalMultiflier: 0
+=======
+    attackDamage: 145
+    maxAmmo: 9
+    reloadTime: 1.35
+    rateOfFire: 3
+    criticalRate: 10
+    criticalMultiflier: 200
+    moveSpeedRate: 20
+  - weaponName: Laser Gauntlet
+    weaponNum: 1002
+    E_WeaponType: 0
+    attackDamage: 23
+    maxAmmo: 50
+    reloadTime: 1.5
+    rateOfFire: 16
+    criticalRate: 5
+    criticalMultiflier: 200
+    moveSpeedRate: 10
+  - weaponName: Aura of Venom
+    weaponNum: 1003
+    E_WeaponType: 1
+    attackDamage: 115
+    maxAmmo: 8
+    reloadTime: 1.5
+    rateOfFire: 0.8
+    criticalRate: 40
+    criticalMultiflier: 350
+    moveSpeedRate: 20
+  - weaponName: Crimson Firescale
+    weaponNum: 1004
+    E_WeaponType: 0
+    attackDamage: 85
+    maxAmmo: 30
+    reloadTime: 1.4
+    rateOfFire: 9
+    criticalRate: 12
+    criticalMultiflier: 200
+>>>>>>> HCH_Branch
     moveSpeedRate: 0
   currWeapon:
     weaponName: 

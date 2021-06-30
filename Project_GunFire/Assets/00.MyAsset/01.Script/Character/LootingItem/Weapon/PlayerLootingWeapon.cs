@@ -10,7 +10,7 @@ public class PlayerLootingWeapon : MonoBehaviour
 
     [Space(15)]
     [SerializeField] GameObject weaponInfoUICanvas;
-    [SerializeField] Image weaponInfoUIImage;
+    Image weaponInfoUIImage;
     private Image WeaponInfoUIImage
     {
         get
@@ -22,10 +22,26 @@ public class PlayerLootingWeapon : MonoBehaviour
     [SerializeField] float UIPlusY;
     [SerializeField] bool ray;
 
+    private void Start()
+    {
+        weaponInfoUIImage = weaponInfoUICanvas.transform.GetChild(0).GetComponent<Image>();
+    }
+
     void Update()
     {
+        SetRayVectorInfo();
+        DisplayWeaponUI();
+    }
+
+    void SetRayVectorInfo()
+    {
+        rayOriginVec = Camera.main.transform.position;
+        rayDirectionVec = Camera.main.transform.forward;
+    }
+
+    void DisplayWeaponUI()
+    {
         RaycastHit rayHitInfo;
-        SetrayVectorInfo();
 
         ray = Physics.Raycast(rayOriginVec, rayDirectionVec, out rayHitInfo, rayDist, LayerMask.GetMask("L_Weapon"));
 
@@ -37,18 +53,18 @@ public class PlayerLootingWeapon : MonoBehaviour
 
             WeaponInfoUIImage.sprite = weaponNum == InfoAndUI.weaponNum ? InfoAndUI.WeaponInfoUIImage : null;
             weaponInfoUICanvas.transform.position = UIPos;
+<<<<<<< HEAD
             weaponInfoUICanvas.transform.position = rayHitInfo.collider.transform.position
                 + rayHitInfo.collider.transform.up * UIPlusY;
+=======
+            //weaponInfoUICanvas.transform.position = transform.position + transform.forward * 0.3f + transform.up * 0.05f;
+
+            if(Input.GetKeyDown(KeyCode.F)) WeaponSystem.Instance.ChangeWeapon(weaponNum);
+>>>>>>> HCH_Branch
         }
         else
         {
             WeaponInfoUIImage.sprite = null;
         }
-    }
-
-    void SetrayVectorInfo()
-    {
-        rayOriginVec = Camera.main.transform.position;
-        rayDirectionVec = Camera.main.transform.forward;
     }
 }

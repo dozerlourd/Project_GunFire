@@ -18,11 +18,13 @@ public class FixedAim : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            IsFixed = IsFixed == true ? false : true;
-        }
-    }
+    private void Start() => Cursor.lockState = CursorLockMode.Locked;
+
+    //void Update()
+    //{
+    //    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Tilde))
+    //    {
+    //        IsFixed = IsFixed ? false : true;
+    //    }
+    //}
 }
