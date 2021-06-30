@@ -7,12 +7,17 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] GameObject bullet;
     WeaponSystem weaponSystem;
 
+    public float CoolTime
+    {
+        get => coolTime; set => coolTime = 1 / WeaponSystem.Instance.CurrWeapon.rateOfFire;
+    }
     [SerializeField] float coolTime = 0.35f;
     float currTimer = 0;
     void Start()
     {
         StartCoroutine(FireCheck());
         weaponSystem = WeaponSystem.Instance;
+        CoolTime = CoolTime;
     }
 
     IEnumerator FireCheck()
@@ -31,6 +36,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    /// <summary> 무기의 발사 대기시간을 재는 함수 </summary>
     IEnumerator CheckTime()
     {
         while(true)

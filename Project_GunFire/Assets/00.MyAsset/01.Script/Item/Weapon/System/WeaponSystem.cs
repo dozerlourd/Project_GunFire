@@ -36,7 +36,7 @@ public class WeaponSystem : SceneObject<WeaponSystem>
     }
     [SerializeField] private Weapon currWeapon;
 
-    private void Start()
+    private void Awake()
     {
         CurrWeapon = ChangeWeapon(0);
     }

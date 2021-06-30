@@ -36,8 +36,9 @@ public class PlayerLootingWeapon : MonoBehaviour
             InfoAndUI InfoAndUI = WeaponInfoUISystem.Instance.Arr_WeaponInfoUI[weaponNum - 1001];
 
             WeaponInfoUIImage.sprite = weaponNum == InfoAndUI.weaponNum ? InfoAndUI.WeaponInfoUIImage : null;
-            //weaponInfoUICanvas.transform.position = UIPos;
-            //weaponInfoUICanvas.transform.position = transform.position + transform.forward * 0.3f + transform.up * 0.05f;
+            weaponInfoUICanvas.transform.position = UIPos;
+            weaponInfoUICanvas.transform.position = rayHitInfo.collider.transform.position
+                + rayHitInfo.collider.transform.up * UIPlusY;
         }
         else
         {
