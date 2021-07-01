@@ -21,8 +21,8 @@ public class Test : MonoBehaviour
         while(true)
         {
             yield return sf;
-            PlayerSystem.Instance.PlayerHP.TakeDamage = _dmg;
             enemyHP.TakeDamage = _dmg;
+            if (PlayerSystem.Instance.Player) PlayerSystem.Instance.PlayerHP.TakeDamage = _dmg;
         }
     }
 }

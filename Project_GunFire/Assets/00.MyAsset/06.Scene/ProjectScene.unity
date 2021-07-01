@@ -713,6 +713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e221daba274c444925683286336f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityScale: 0
+  E_ItemType: 0
   _weaponNum: 1003
 --- !u!1 &750936780
 GameObject:
@@ -1832,6 +1834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e221daba274c444925683286336f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityScale: 0
+  E_ItemType: 0
   _weaponNum: 1001
 --- !u!135 &1633508323
 SphereCollider:
@@ -1892,6 +1896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e221daba274c444925683286336f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityScale: 0
+  E_ItemType: 0
   _weaponNum: 1004
 --- !u!135 &1640413241
 SphereCollider:
@@ -2113,6 +2119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e221daba274c444925683286336f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityScale: 0
+  E_ItemType: 0
   _weaponNum: 1002
 --- !u!135 &1754489740
 SphereCollider:
@@ -2327,7 +2335,7 @@ MonoBehaviour:
     moveSpeedRate: 20
   - weaponName: Laser Gauntlet
     weaponNum: 1002
-    E_WeaponType: 0
+    E_WeaponType: 2
     attackDamage: 23
     maxAmmo: 50
     currAmmo: 0
@@ -2347,7 +2355,7 @@ MonoBehaviour:
     criticalRate: 40
     criticalMultiflier: 350
     moveSpeedRate: 20
-  - weaponName: Crimson Firescale
+  - weaponName: Drimson Firescale
     weaponNum: 1004
     E_WeaponType: 0
     attackDamage: 85
@@ -2360,7 +2368,7 @@ MonoBehaviour:
     moveSpeedRate: 0
   currWeapon:
     weaponName: 
-    weaponNum: 
+    weaponNum: 0
     E_WeaponType: 0
     attackDamage: 0
     maxAmmo: 0

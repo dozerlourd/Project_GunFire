@@ -6,11 +6,12 @@ using UnityEngine;
 public class Weapon
 {
     [Tooltip("무기 이름")] public string weaponName;
-    [Tooltip("무기 번호")] public string weaponNum;
+    [Tooltip("무기 번호")] public int weaponNum;
     public enum WeaponType
     {
         Hitscan = 0,
-        Projective = 1
+        Projective,
+        Laser = 2
     }
     [Tooltip("발사 타입 (히트스캔, 투사체)")] public WeaponType E_WeaponType;
     [Tooltip("무기 공격력")] public float attackDamage;
@@ -40,7 +41,7 @@ public class WeaponSystem : SceneObject<WeaponSystem>
 
     private void Awake()
     {
-        CurrWeapon = ChangeWeapon(1001);
+        CurrWeapon = ChangeWeapon(Weapons[0].weaponNum);
     }
 
     /// <summary> 현재 착용 중인 무기의 정보를 변경할 무기의 정보로 업데이트 시켜주는 함수 </summary>
