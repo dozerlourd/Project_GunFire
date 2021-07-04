@@ -1,0 +1,743 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19041.928; Version 2004; 64bit' Language: 'ko' Physical Memory: 16335 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Users\Administrator\Desktop\Unity\Unity File\2020.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/GitHub_Project/Project_GunFire/Project_GunFire
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+54662
+Successfully changed project path to: D:/GitHub_Project/Project_GunFire/Project_GunFire
+D:/GitHub_Project/Project_GunFire/Project_GunFire
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 40.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path C:/Users/Administrator/Desktop/Unity/Unity File/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/GitHub_Project/Project_GunFire/Project_GunFire/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Radeon RX 580 Series (ID=0x67df)
+    Vendor:   
+    VRAM:     8171 MB
+    Driver:   27.20.1034.6
+Initialize mono
+Mono path[0] = 'C:/Users/Administrator/Desktop/Unity/Unity File/2020.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/Administrator/Desktop/Unity/Unity File/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Users/Administrator/Desktop/Unity/Unity File/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Users/Administrator/Desktop/Unity/Unity File/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002406 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 40.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.344 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003207 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 40.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.192 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1964 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.1 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2400.
+Total: 2.549000 ms (FindLiveObjects: 0.192100 ms CreateObjectMapping: 0.046400 ms MarkObjects: 2.215400 ms  DeleteObjects: 0.093600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/00.MyAsset/05.Material/Particle_Material
+  artifactKey: Guid(ef3283fe004180b40a78167f1a7772e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/05.Material/Particle_Material using Guid(ef3283fe004180b40a78167f1a7772e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4b0ef586eb16d534067e6bb5cb75f6a') in 0.009439 seconds 
+  Import took 0.012693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.568451 seconds.
+  path: Assets/00.MyAsset/05.Material/TextureMaterial
+  artifactKey: Guid(3c3b9be4a34ec99498648b85492e4cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/05.Material/TextureMaterial using Guid(3c3b9be4a34ec99498648b85492e4cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ba54451c441ab4cf0f66ca0691e030c') in 0.008380 seconds 
+  Import took 0.029696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.157757 seconds.
+  path: Assets/00.MyAsset/05.Material/Phisics Material
+  artifactKey: Guid(cf685d1d8cfa2784ca4e721748fb7ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/05.Material/Phisics Material using Guid(cf685d1d8cfa2784ca4e721748fb7ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4abb31d5a5bc0faf94fed066a93feb2f') in 0.008367 seconds 
+  Import took 0.011629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.028560 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Precision_EastNorth.png
+  artifactKey: Guid(d8f08d67c272cf84a91226599a082958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Precision_EastNorth.png using Guid(d8f08d67c272cf84a91226599a082958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a07d4f7cdbc48b3d84239fd9334b34d') in 0.126410 seconds 
+  Import took 0.149079 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.183330 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Precision_EastNorth.png
+  artifactKey: Guid(d8f08d67c272cf84a91226599a082958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Precision_EastNorth.png using Guid(d8f08d67c272cf84a91226599a082958) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10560d67ede24ab7d7391ac505900704') in 0.048343 seconds 
+  Import took 0.051810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 67.089732 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/precision.png
+  artifactKey: Guid(1475d8ce85280364ebbe74541dddeb93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/precision.png using Guid(1475d8ce85280364ebbe74541dddeb93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9729b7f3feec9456ed3f697990843c94') in 0.017045 seconds 
+  Import took 0.035953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.601339 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/precision.png
+  artifactKey: Guid(1475d8ce85280364ebbe74541dddeb93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/precision.png using Guid(1475d8ce85280364ebbe74541dddeb93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a69caf0314ad77aa04cf147948c66247') in 0.027019 seconds 
+  Import took 0.030471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 517.166992 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/precision_Right_UI.png
+  artifactKey: Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/precision_Right_UI.png using Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3601dce6f0b390f3c13323c9192e0ab4') in 0.014595 seconds 
+  Import took 0.026545 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.272108 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/precision_Right_UI.png
+  artifactKey: Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/precision_Right_UI.png using Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0185f13c9627ae38aa04b5408bff4d38') in 0.025708 seconds 
+  Import took 0.038951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 182.801854 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '281cdaedfdde3a1888df949063683b8c') in 0.013953 seconds 
+  Import took 0.038071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.839702 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/precision_Left_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/precision_Left_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e102f516ee96e66a9c5e43e88294f31c') in 0.013303 seconds 
+  Import took 0.026297 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.420334 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/precision_Left_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/precision_Left_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1023106c26e788b3752a9bca134a88ca') in 0.029916 seconds 
+  Import took 0.049354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.967505 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '798153f9be2336de828e2332e18dc950') in 0.012136 seconds 
+  Import took 0.015395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002337 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '798153f9be2336de828e2332e18dc950') in 0.007888 seconds 
+  Import took 0.011084 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.042821 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crossfiar
+  artifactKey: Guid(4fef86d1adffb7045a34cd77c5478a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crossfiar using Guid(4fef86d1adffb7045a34cd77c5478a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01cf52f2e2378e2c8d28e00948f84a89') in 0.008219 seconds 
+  Import took 0.011317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.175225 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair
+  artifactKey: Guid(4fef86d1adffb7045a34cd77c5478a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair using Guid(4fef86d1adffb7045a34cd77c5478a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f953a369291df6da135b2e3a4f7ee37') in 0.008987 seconds 
+  Import took 0.025534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 78.667638 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png
+  artifactKey: Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png using Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb2f424d15587f6056f2ee69de0afd0a') in 0.015199 seconds 
+  Import took 0.038887 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001320 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png
+  artifactKey: Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png using Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb2f424d15587f6056f2ee69de0afd0a') in 0.007394 seconds 
+  Import took 0.010927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 338.887195 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_UI.psd
+  artifactKey: Guid(cea3751fb657a0044b3bc712b4b94c0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_UI.psd using Guid(cea3751fb657a0044b3bc712b4b94c0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e6fa350a44e1fc6e00acf88c7acdbe0') in 0.017068 seconds 
+  Import took 0.020341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.802215 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_UI.psd
+  artifactKey: Guid(cea3751fb657a0044b3bc712b4b94c0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_UI.psd using Guid(cea3751fb657a0044b3bc712b4b94c0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd001ad5c7bec1dd9740a4ba82c6443a0') in 0.030639 seconds 
+  Import took 0.042148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2758.149717 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd0017e9a360261db82220f76aa30b35') in 0.033296 seconds 
+  Import took 0.048290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.526654 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0ef392a1a2adadebf6e8e21b4ff4bed') in 0.030527 seconds 
+  Import took 0.047299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.254877 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4970df64f721e7f3ec531696acef12b') in 0.023291 seconds 
+  Import took 0.037179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 289.682894 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca317d794e9fce4c5c2980f09672f022') in 0.020912 seconds 
+  Import took 0.040290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.187419 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03cd861ceebdbc174e1798dd0ebdd726') in 0.010444 seconds 
+  Import took 0.013625 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.404203 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision.png
+  artifactKey: Guid(1475d8ce85280364ebbe74541dddeb93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision.png using Guid(1475d8ce85280364ebbe74541dddeb93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dc0203059c0340523d7ce720b3dea55') in 0.028511 seconds 
+  Import took 0.048531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.054493 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision.png
+  artifactKey: Guid(1475d8ce85280364ebbe74541dddeb93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision.png using Guid(1475d8ce85280364ebbe74541dddeb93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a1402045d9a0e24c66fcf54a9d138dc') in 0.037754 seconds 
+  Import took 0.040969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.492376 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '644d5f7ba7b20c16ef2bac68d8f8b236') in 0.022873 seconds 
+  Import took 0.056447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.509601 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35123d535d74aba9657c4275b1b95693') in 0.021443 seconds 
+  Import took 0.024907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.973011 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png
+  artifactKey: Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png using Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0fafdbbc238595a0d10fddcbbc7c520') in 0.013550 seconds 
+  Import took 0.036577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.169118 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png
+  artifactKey: Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png using Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0d2202d013a1733bda71360b1343504') in 0.017817 seconds 
+  Import took 0.021201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.914757 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png
+  artifactKey: Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png using Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46cefe22f4d27d97a3d1c6cff3beafea') in 0.014185 seconds 
+  Import took 0.030725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.002777 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png
+  artifactKey: Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png using Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c1edf171669dcf973f1e5f4668cb225') in 0.021191 seconds 
+  Import took 0.037407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.232585 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png
+  artifactKey: Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png using Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a765e3eae073ae18ddd4aa0681a2a06') in 0.018653 seconds 
+  Import took 0.036026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.829248 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aa6044d2470ffcb7732f126adc76474') in 0.011403 seconds 
+  Import took 0.014672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 147.152360 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1c917e673399e8d15c46ef3e02b00a3') in 0.015628 seconds 
+  Import took 0.018827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.056542 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up[_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up[_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20e4582d27c83fe5d31210051e35109c') in 0.020564 seconds 
+  Import took 0.023784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.594776 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left1_UI.png
+  artifactKey: Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left1_UI.png using Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '238829ec5ff553a3510ee2cd9791caa8') in 0.023112 seconds 
+  Import took 0.046973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.060610 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png
+  artifactKey: Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png using Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd467d5b140bdc9ef872a58c0c6c4fe56') in 0.011010 seconds 
+  Import took 0.021735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.424389 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png
+  artifactKey: Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png using Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e89231e755e07da815a3c47e2e937c') in 0.011487 seconds 
+  Import took 0.024463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.328322 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_U[2_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_U[2_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c04122a18fc57f5ce9f0937b9dbe7fa') in 0.019679 seconds 
+  Import took 0.022860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.219193 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eb5a79553318781720f2b04b0ffa1c4') in 0.011332 seconds 
+  Import took 0.035061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.201638 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png
+  artifactKey: Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png using Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdb98e3c3a427004d676345a0eb82798') in 0.018625 seconds 
+  Import took 0.042470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.305350 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e5cc40e56a509213e021dea5d5358d2') in 0.018024 seconds 
+  Import took 0.022195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 53.684671 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a92ba3a0716faef52ef1955672d00d9e') in 0.013512 seconds 
+  Import took 0.034951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.890091 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png
+  artifactKey: Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png using Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e6a90242d3317b4a74db28046e7cf01') in 0.014045 seconds 
+  Import took 0.017231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.598525 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png
+  artifactKey: Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png using Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9b58e3e36734e7212b7a807d386d0da') in 0.013070 seconds 
+  Import took 0.016226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.501233 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '419b88871ac9d914498c5628ea1372ae') in 0.012636 seconds 
+  Import took 0.016549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 93.166766 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Down_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a650dfffc49a7b142370f8376ee827ba') in 0.007643 seconds 
+  Import took 0.011016 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.145658 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/1Precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/1Precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd55857878b645de262bded7b94f889c8') in 0.021716 seconds 
+  Import took 0.034011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.404601 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png
+  artifactKey: Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Up_UI.png using Guid(dd45f72e243d66f43bbafbb0624be633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74bce9f86634ef618153a1f535355845') in 0.011249 seconds 
+  Import took 0.014698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.803110 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/Precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/Precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b07767b9d96ba931da56c412f40949fa') in 0.021882 seconds 
+  Import took 0.025401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.320754 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/Precision_Down_UI.png
+  artifactKey: Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/Precision_Down_UI.png using Guid(4d65b05e6ee7db9458f0d948364a485e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2af693c7e4dcd4907f7351c4a0bef616') in 0.011886 seconds 
+  Import took 0.029444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.277907 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png
+  artifactKey: Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Left_UI.png using Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9339b1e062d7452d009356908bcc8304') in 0.010393 seconds 
+  Import took 0.013642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.922637 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png
+  artifactKey: Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/precision_Right_UI.png using Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58ba4204e8e943a71f25917f3a9f306f') in 0.007549 seconds 
+  Import took 0.026242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.194047 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/Precision_Lef_UI.png
+  artifactKey: Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/Precision_Lef_UI.png using Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeb2f6c0d49bc61180d6cdb40b30b622') in 0.021731 seconds 
+  Import took 0.040690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.742623 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/Precision_Right_UI.png
+  artifactKey: Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/Precision_Right_UI.png using Guid(1cf667093507a9947b4c4630d3f69922) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e678864875d65113ffe88c55f8ab8a6') in 0.020661 seconds 
+  Import took 0.024165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.249222 seconds.
+  path: Assets/00.MyAsset/02.Image/Sprite/Crosshair/Precision_Left_UI.png
+  artifactKey: Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/02.Image/Sprite/Crosshair/Precision_Left_UI.png using Guid(04a248a264851ca44a55e73e0c51d05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24d8dba9957b7ea69e808e751da32bbe') in 0.021829 seconds 
+  Import took 0.025667 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003084 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.050 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1956 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.8 MB.
+System memory in use after: 91.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2416.
+Total: 2.211400 ms (FindLiveObjects: 0.193400 ms CreateObjectMapping: 0.046000 ms MarkObjects: 1.920000 ms  DeleteObjects: 0.051000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 115.659200 seconds.
+  path: Assets/00.MyAsset/04.Animation/CrossHair
+  artifactKey: Guid(105e7038a12bb394a9c240fa119e4be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/04.Animation/CrossHair using Guid(105e7038a12bb394a9c240fa119e4be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf1e07203300a3291d0fe603d80a9374') in 0.009637 seconds 
+  Import took 0.022073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.234975 seconds.
+  path: Assets/00.MyAsset/04.Animation/CrossHair/CrossHair_anim.controller
+  artifactKey: Guid(04f93363daa1d784e9171708cda89de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/04.Animation/CrossHair/CrossHair_anim.controller using Guid(04f93363daa1d784e9171708cda89de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae7b62a85adab22cceee5f5fa36676ce') in 0.016222 seconds 
+  Import took 0.026919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.687026 seconds.
+  path: Assets/00.MyAsset/04.Animation/CrossHair/Crosshair_anim.controller
+  artifactKey: Guid(04f93363daa1d784e9171708cda89de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/04.Animation/CrossHair/Crosshair_anim.controller using Guid(04f93363daa1d784e9171708cda89de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '491c43f7971c9b1f77d0a337a0fc1439') in 0.008654 seconds 
+  Import took 0.011781 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.889276 seconds.
+  path: Assets/00.MyAsset/04.Animation/Crosshair
+  artifactKey: Guid(105e7038a12bb394a9c240fa119e4be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/04.Animation/Crosshair using Guid(105e7038a12bb394a9c240fa119e4be0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b7bfee3f5fce11bcdffe40ad0cbe02e') in 0.008244 seconds 
+  Import took 0.011312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 99.865347 seconds.
+  path: Assets/00.MyAsset/04.Animation/Crosshair/Crosshair_Fire.anim
+  artifactKey: Guid(dda6a45ef16129f4b9947e938b2db42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/04.Animation/Crosshair/Crosshair_Fire.anim using Guid(dda6a45ef16129f4b9947e938b2db42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bc91692d6fcbfb6aaca844adf218be7') in 0.011369 seconds 
+  Import took 0.027506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.219677 seconds.
+  path: Assets/00.MyAsset/04.Animation/Crosshair/Crossjair_Idle.anim
+  artifactKey: Guid(f4b13d61b50fe814e90ee658f233ff96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/04.Animation/Crosshair/Crossjair_Idle.anim using Guid(f4b13d61b50fe814e90ee658f233ff96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f19cbf2d1ea70947aeb89ce57a318e97') in 0.008869 seconds 
+  Import took 0.012038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000509 seconds.
+  path: Assets/00.MyAsset/04.Animation/Crosshair/Crossjair_Idle.anim
+  artifactKey: Guid(f4b13d61b50fe814e90ee658f233ff96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/04.Animation/Crosshair/Crossjair_Idle.anim using Guid(f4b13d61b50fe814e90ee658f233ff96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f19cbf2d1ea70947aeb89ce57a318e97') in 0.002146 seconds 
+  Import took 0.005227 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 656.163318 seconds.
+  path: Assets/00.MyAsset/01.Script/Character/Attack/PlayerAttack.cs
+  artifactKey: Guid(9c296d3ecfb7c67488857d658ec6151f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/01.Script/Character/Attack/PlayerAttack.cs using Guid(9c296d3ecfb7c67488857d658ec6151f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4c0728d00bc44d26e1e9be565f444ec') in 0.019452 seconds 
+  Import took 0.042674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003141 seconds.
+  path: Assets/00.MyAsset/01.Script/Character/Attack/PlayerAttack.cs
+  artifactKey: Guid(9c296d3ecfb7c67488857d658ec6151f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/01.Script/Character/Attack/PlayerAttack.cs using Guid(9c296d3ecfb7c67488857d658ec6151f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4c0728d00bc44d26e1e9be565f444ec') in 0.001644 seconds 
+  Import took 0.004696 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003434 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.137 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1956 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.9 MB.
+System memory in use after: 92.0 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2420.
+Total: 2.294600 ms (FindLiveObjects: 0.267300 ms CreateObjectMapping: 0.047400 ms MarkObjects: 1.917600 ms  DeleteObjects: 0.060900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 125.134291 seconds.
+  path: Assets/00.MyAsset/01.Script/Character/Attack/PlayerAttack.cs
+  artifactKey: Guid(9c296d3ecfb7c67488857d658ec6151f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00.MyAsset/01.Script/Character/Attack/PlayerAttack.cs using Guid(9c296d3ecfb7c67488857d658ec6151f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e1092dbf01d69285871696511d90798') in 0.005366 seconds 
+  Import took 0.033205 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003446 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.118 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1956 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.9 MB.
+System memory in use after: 92.0 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2424.
+Total: 2.266900 ms (FindLiveObjects: 0.216500 ms CreateObjectMapping: 0.046900 ms MarkObjects: 1.942000 ms  DeleteObjects: 0.060100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003210 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.089 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1956 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.9 MB.
+System memory in use after: 92.0 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2428.
+Total: 2.489700 ms (FindLiveObjects: 0.222400 ms CreateObjectMapping: 0.047900 ms MarkObjects: 2.127900 ms  DeleteObjects: 0.089700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [SerializeField] private Animator crosshairAnim;
     WeaponSystem weaponSystem;
 
     [SerializeField] GameObject bullet;
+    [Tooltip("피격 이펙트"), SerializeField] GameObject fireEffect;
 
     /// <summary> 무기의 초당 발사 횟수인 rateOfFire을 초 단위로 변환하여 계산한 값 </summary>
     float coolTime => 1 / WeaponSystem.Instance.CurrWeapon.rateOfFire;
@@ -59,6 +61,8 @@ public class PlayerAttack : MonoBehaviour
             if (Co_Reload != null) StopCoroutine(Co_Reload);
             Co_Reload = StartCoroutine(Reload());
         }
+
+        // 안나와 ㅠㅠ //Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * Mathf.Infinity, Color.green);
     }
 
     /// <summary> 공격 딜레이를 계산하는 함수 </summary>
@@ -101,13 +105,13 @@ public class PlayerAttack : MonoBehaviour
         switch(weaponSystem.CurrWeapon.E_WeaponType)
         {
             case Weapon.WeaponType.Hitscan:
-                HitscanAttack();
+                HitscanAttack(_dmg);
                 break;
             case Weapon.WeaponType.Projective:
-                ProjectiveAttack();
+                ProjectiveAttack(_dmg);
                 break;
             case Weapon.WeaponType.Laser:
-                LaserAttack();
+                LaserAttack(_dmg);
                 break;
         }
 
@@ -127,18 +131,88 @@ public class PlayerAttack : MonoBehaviour
     /// <returns> 치명타율의 적용 여부 </returns>
     bool CriticalCheck() => weaponSystem.CurrWeapon.criticalRate >= Random.Range(0, 100);
 
-    void HitscanAttack()
+
+
+
+
+
+    void HitscanAttack(float _dmg)
+    {
+        RaycastHit rayHitInfo;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out rayHitInfo))
+        {
+            ShowFireEffect(rayHitInfo);
+
+            //히트스캔 이펙트 뿜뿜
+
+            if (rayHitInfo.collider.tag == "T_Enemy")
+            {
+                //rayHitInfo.collider.GetComponent<EnemyFSM>().EnemyTakeDamage(_dmg);
+                ShowCrosshairEnemyHit();
+                return;
+            }
+        }
+        ShowCrosshair();
+    }
+
+    void ProjectiveAttack(float _dmg)
     {
 
     }
 
-    void ProjectiveAttack()
+    void LaserAttack(float _dmg)
     {
+        RaycastHit rayHitInfo;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+        if (Physics.Raycast(ray, out rayHitInfo))
+        {
+            ShowFireEffect(rayHitInfo);
+
+            //레이저 이펙트 뿜뿜
+
+            if (rayHitInfo.collider.tag == "T_Enemy")
+            {
+                //rayHitInfo.collider.GetComponent<EnemyFSM>().EnemyTakeDamage(_dmg);
+                ShowCrosshairEnemyHit();
+                return;
+            }
+        }
+        ShowCrosshair();
     }
 
-    void LaserAttack()
-    {
 
+
+
+
+
+
+
+    //void RayTypeScanEnemy()
+    //{
+    //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+    //    if (Physics.Raycast(ray, out _rayHitInfo))
+    //    {
+            
+    //    }
+    //}
+
+    void ShowFireEffect(RaycastHit _rayHit)
+    {
+        GameObject SFX_Clone = Instantiate(fireEffect, _rayHit.point, Quaternion.LookRotation(-_rayHit.normal));
+        Debug.DrawRay(_rayHit.point, _rayHit.normal * 100, Color.red);
+    }
+
+    void ShowCrosshair()
+    {
+        crosshairAnim.SetTrigger("Fire");
+    }
+
+    void ShowCrosshairEnemyHit()
+    {
+        crosshairAnim.SetTrigger("EnemyHitFire");
     }
 }
