@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8913596339873275003}
   - component: {fileID: 8913596339873275004}
   - component: {fileID: 8913596339873275005}
+  - component: {fileID: 1555075370706256604}
   m_Layer: 0
   m_Name: TestEffect
   m_TagString: Untagged
@@ -81,3 +82,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1555075370706256604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8913596339873275007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c684bf2f639654b93fd36aa9ddbdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

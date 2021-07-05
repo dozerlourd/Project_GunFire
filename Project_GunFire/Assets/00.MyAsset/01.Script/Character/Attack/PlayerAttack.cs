@@ -68,9 +68,9 @@ public class PlayerAttack : MonoBehaviour
     /// <summary> 공격 딜레이를 계산하는 함수 </summary>
     IEnumerator CheckTime()
     {
-        while(true)
+        while (true)
         {
-            if(currTimer < coolTime)
+            if (currTimer < coolTime)
             {
                 currTimer += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
@@ -149,7 +149,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (rayHitInfo.collider.tag == "T_Enemy")
             {
-                //rayHitInfo.collider.GetComponent<EnemyFSM>().EnemyTakeDamage(_dmg);
+                rayHitInfo.collider.GetComponent<EnemyFSM>().EnemyTakeDamage(_dmg, Vector3.zero);
                 ShowCrosshairEnemyHit();
                 return;
             }
@@ -175,7 +175,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (rayHitInfo.collider.tag == "T_Enemy")
             {
-                //rayHitInfo.collider.GetComponent<EnemyFSM>().EnemyTakeDamage(_dmg);
+                rayHitInfo.collider.GetComponent<EnemyFSM>().EnemyTakeDamage(_dmg, Vector3.zero);
                 ShowCrosshairEnemyHit();
                 return;
             }
