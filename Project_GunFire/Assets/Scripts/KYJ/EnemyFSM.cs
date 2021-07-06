@@ -32,21 +32,29 @@ public class EnemyFSM : MonoBehaviour
     // 공격범위
     public float attackRange = 1.5f;
 
-    // 이동속도
-    public float moveSpeed = 5f;
-
     bool isDamaged = false;
 
-    CharacterController cc;
+    [SerializeField, Tooltip("체인 풀리는 시간")] float chainReleasedTime;
 
+    public bool IsChained
+    {
+        get => isChained; set
+        {
+            isChained = value;
+        }
+    }
+    bool isChained = false;
+
+    public IEnumerator ChainDeactivate()
+    {
+        yield return new WaitForSeconds(chainReleasedTime);
+        agent.enabled = true;
+        isChained = false;
+    }
 
     // 내비게이션 에이전트 변수
     private NavMeshAgent agent;
 
-
-
-
-    // Start is called before the first frame update
     void Start()
     {
         // enemy 대기상태로 시작
@@ -54,22 +62,20 @@ public class EnemyFSM : MonoBehaviour
 
         player = GameObject.Find("Player").transform;
 
-        cc = transform.GetComponent<CharacterController>();
-
         // 내비게이션 에이젼트 컴포넌트 받아오기
-      agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
 
         enemyHp = GetComponent<EnemyHP>();
-       
-        
-
-      
-
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (IsChained)
+        {
+            agent.enabled = false;
+            return;
+        }
+
         // 각 상태별 처리
         switch (eState)
         {
@@ -99,8 +105,6 @@ public class EnemyFSM : MonoBehaviour
         {
             agent.SetDestination(player.position);
         }
-
-    
     }
 
     private void AttackDamaged()
@@ -121,7 +125,7 @@ public class EnemyFSM : MonoBehaviour
         float distance = (player.position - transform.position).magnitude;
 
         // 만일 타겟이 시야범위안에 있다면..
-        if( distance <= sightRange )
+        if( distance <= sightRange)
         {
             // move상태로 전환한다
             eState = EnemyState.Move;
