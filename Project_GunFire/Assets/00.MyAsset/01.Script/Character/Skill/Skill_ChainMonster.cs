@@ -20,13 +20,16 @@ public class Skill_ChainMonster : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag != "T_Enemy") return;
+        Collider[] enemyCols = Physics.OverlapSphere(col.transform.position, 15.0f, LayerMask.GetMask("L_Enemy"));
+        Debug.Log(enemyCols.Length);
 
-        sphereCollider.radius = 13.5f;
-        EnemyFSM enemyFSM = col.GetComponent<EnemyFSM>();
-        enemyFSM.IsChained = true;
-        Debug.Log("Chain!");
-        enemyFSM.StartCoroutine(enemyFSM.ChainDeactivate());
+        foreach (Collider enemy in enemyCols)
+        {
+            EnemyFSM enemyFSM = enemy.GetComponent<EnemyFSM>();
+            enemyFSM.IsChained = true;
+            Debug.Log("Chain!");
+            enemyFSM.StartCoroutine(enemyFSM.ChainDeactivate());
+        }
         gameObject.SetActive(false);
     }
 }
