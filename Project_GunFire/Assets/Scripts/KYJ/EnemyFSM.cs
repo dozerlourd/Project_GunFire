@@ -34,8 +34,6 @@ public class EnemyFSM : MonoBehaviour
 
     bool isDamaged = false;
 
-    [SerializeField, Tooltip("체인 풀리는 시간")] float chainReleasedTime;
-
     public bool IsChained
     {
         get => isChained; set
@@ -45,9 +43,9 @@ public class EnemyFSM : MonoBehaviour
     }
     bool isChained = false;
 
-    public IEnumerator ChainDeactivate()
+    public IEnumerator ChainDeactivate(float _time)
     {
-        yield return new WaitForSeconds(chainReleasedTime);
+        yield return new WaitForSeconds(_time);
         agent.enabled = true;
         isChained = false;
     }
@@ -70,6 +68,17 @@ public class EnemyFSM : MonoBehaviour
 
     void Update()
     {
+        switch(eState)
+        {
+            case EnemyState.AttackDamaged:
+                AttackDamaged();
+                break;
+
+            case EnemyState.Die:
+                Die();
+                break;
+        }
+
         if (IsChained)
         {
             agent.enabled = false;
@@ -90,16 +99,6 @@ public class EnemyFSM : MonoBehaviour
             case EnemyState.Attack:
                 Attack();
                 break;
-
-            case EnemyState.AttackDamaged:
-                AttackDamaged();
-                break;
-
-            case EnemyState.Die:
-                Die();
-                break;
-                
-
         }
         if(isDamaged && (eState == EnemyState.Idle || eState == EnemyState.Move))
         {

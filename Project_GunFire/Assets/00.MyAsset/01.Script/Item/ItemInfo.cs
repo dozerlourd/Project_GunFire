@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class ItemInfo : MonoBehaviour
 {
-    [SerializeField] float gravityScale;
+    [SerializeField] protected float gravityScale;
 
     public enum ItemType
     {

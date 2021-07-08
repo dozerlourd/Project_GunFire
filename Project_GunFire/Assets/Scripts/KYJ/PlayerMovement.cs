@@ -27,12 +27,20 @@ public class PlayerMovement : MonoBehaviour
 
     CharacterController cc;
 
+    Coroutine Co_InitSpeed;
+    [SerializeField] float dashSpeed;
+    WaitForSeconds initSpeedTime;
+    [SerializeField] float dashCooltime;
+    float currDashCooltime = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         cc = GetComponent<CharacterController>();
         isMovingFast = false;
         finalMoveSpeed = moveSpeed;
+        initSpeedTime = new WaitForSeconds(dashSpeed);
+        StartCoroutine(DashCheck());
     }
 
     // Update is called once per frame
@@ -54,19 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         Gravity();
 
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            isMovingFast = true;
-
-            finalMoveSpeed = moveSpeed * speedAdjust;
-
-        }
-        else
-        {
-            isMovingFast = false;
-            finalMoveSpeed = moveSpeed;
-        }
+        finalMoveSpeed = isMovingFast ? (moveSpeed * speedAdjust) : moveSpeed;
 
         // 이동한다
         cc.Move(new Vector3(dir.x * finalMoveSpeed, dir_y, dir.z * finalMoveSpeed) * Time.deltaTime);
@@ -108,5 +104,36 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    IEnumerator DashCheck()
+    {
+        StartCoroutine(CheckDashCooltime());
+        while (true)
+        {
+            yield return new WaitUntil(() => currDashCooltime >= dashCooltime);
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.LeftShift));
+            isMovingFast = true;
+            currDashCooltime = 0;
+            if (Co_InitSpeed != null) StopCoroutine(Co_InitSpeed);
+            Co_InitSpeed = StartCoroutine(InitSpeed());
+        }
+    }
+
+    IEnumerator CheckDashCooltime()
+    {
+        while (true)
+        {
+            if (currDashCooltime < dashCooltime)
+            {
+                currDashCooltime += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+            else yield return new WaitForEndOfFrame();
+        }
+    }
+
+    IEnumerator InitSpeed()
+    {
+        yield return initSpeedTime;
+        isMovingFast = false;
+    }
 }
-    

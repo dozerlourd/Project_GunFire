@@ -4,10 +4,28 @@ using UnityEngine;
 
 public class PlayerSkill : MonoBehaviour
 {
-    [SerializeField] GameObject ChainSphere;
-    [SerializeField] float SkillMoveSpeed_E;
+    [SerializeField] GameObject ChainSphere, Granage;
+    [SerializeField] float SkillMoveSpeed_E, SkillMoveSpeed_Q;
 
-    [SerializeField] int MaxCount_Q;
+
+    public int MaxCount_Q
+    {
+        get
+        {
+            //// 만약 각성 1이면 리턴 maxCount_Q + 4.
+            //if () return maxCount_Q;
+            //// 그렇지 않고, 각성 2이면 리턴 maxCount_Q + 8.
+            //else if () return maxCount_Q;
+            //// 그렇지 않고, 각성 3이면 리턴 maxCount_Q + 12.
+            //else if () return maxCount_Q;
+            //// 그렇지 않고, 각성 2이면 리턴 maxCount_Q.
+            //else
+            return maxCount_Q;
+        }
+    }
+    [SerializeField, Tooltip("수류탄 최대 소지량")] int maxCount_Q;
+    public int SetMaxCount_Q(int value) => maxCount_Q = value;
+
     [SerializeField] float coolTime_E;
 
     public int SkillCount_Q
@@ -47,11 +65,15 @@ public class PlayerSkill : MonoBehaviour
     {
         while (true)
         {
+            if (skillCount_Q <= 0) yield return null;
             yield return SkillCountCheck_Q;
             yield return InputCheck_Q;
 
             SetSkillCount_Q(SkillCount_Q - 1);
             Debug.Log("Q");
+            GameObject SkillClone = Instantiate(Granage, transform.position, Quaternion.identity);
+            SkillClone.SetActive(true);
+            SkillClone.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * SkillMoveSpeed_Q, ForceMode.Impulse);
         }
     }
 
