@@ -3538,6 +3538,7 @@ MonoBehaviour:
     criticalRate: 10
     criticalMultiflier: 200
     moveSpeedRate: 20
+    fireSpreadRate: 20
   - weaponName: Laser Gauntlet
     weaponNum: 1002
     E_WeaponType: 2
@@ -3549,6 +3550,7 @@ MonoBehaviour:
     criticalRate: 5
     criticalMultiflier: 200
     moveSpeedRate: 10
+    fireSpreadRate: 0
   - weaponName: Aura of Venom
     weaponNum: 1003
     E_WeaponType: 1
@@ -3560,6 +3562,7 @@ MonoBehaviour:
     criticalRate: 40
     criticalMultiflier: 350
     moveSpeedRate: 20
+    fireSpreadRate: 0
   - weaponName: Drimson Firescale
     weaponNum: 1004
     E_WeaponType: 0
@@ -3571,6 +3574,7 @@ MonoBehaviour:
     criticalRate: 12
     criticalMultiflier: 200
     moveSpeedRate: 0
+    fireSpreadRate: 8.5
   currWeapon:
     weaponName: 
     weaponNum: 0
@@ -3583,6 +3587,7 @@ MonoBehaviour:
     criticalRate: 0
     criticalMultiflier: 0
     moveSpeedRate: 0
+    fireSpreadRate: 0
 --- !u!1 &1852647335
 GameObject:
   m_ObjectHideFlags: 0

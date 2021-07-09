@@ -139,7 +139,7 @@ public class PlayerAttack : MonoBehaviour
     void HitscanAttack(float _dmg)
     {
         RaycastHit rayHitInfo;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition + new Vector3(Random.Range(0, weaponSystem.CurrWeapon.fireSpreadRate), Random.Range(0, weaponSystem.CurrWeapon.fireSpreadRate), 0));
 
         if (Physics.Raycast(ray, out rayHitInfo))
         {

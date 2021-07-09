@@ -21,7 +21,8 @@ public class Weapon
     [Tooltip("초당 공격 속도 (0.01 ~ 20.0)"), Range(0.01f, 20.0f)] public float rateOfFire;
     [Tooltip("치명타 확률 (0 ~ 100)"), Range(0.01f, 100.0f)] public float criticalRate;
     [Tooltip("치명타 배수 (100.0f ~ 500.0f)"), Range(100.0f, 500.0f)] public float criticalMultiflier;
-    [Tooltip("이동속도 증감률 (-100.0f ~ 100.0f"), Range(-100.0f, 100.0f)] public float moveSpeedRate;
+    [Tooltip("이동속도 증감률 (-100.0f ~ 100.0f)"), Range(-100.0f, 100.0f)] public float moveSpeedRate;
+    [Tooltip("탄퍼짐 수치 - Hitscan 무기만 취급 (?f ~ ?f)"), /*Range(-100.0f, 100.0f)*/] public float fireSpreadRate;
 }
 
 public class WeaponSystem : SceneObject<WeaponSystem>
