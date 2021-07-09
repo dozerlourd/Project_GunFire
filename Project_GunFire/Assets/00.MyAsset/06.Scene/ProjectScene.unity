@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 93493282}
   - component: {fileID: 93493281}
   - component: {fileID: 93493280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 614678970}
   - component: {fileID: 614678969}
   - component: {fileID: 614678968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1175,7 +1175,7 @@ GameObject:
   - component: {fileID: 750936784}
   - component: {fileID: 750936783}
   - component: {fileID: 750936782}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1919,7 +1919,7 @@ GameObject:
   - component: {fileID: 1110065214}
   - component: {fileID: 1110065213}
   - component: {fileID: 1110065212}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2134,7 +2134,7 @@ GameObject:
   - component: {fileID: 1258608825}
   - component: {fileID: 1258608824}
   - component: {fileID: 1258608823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2510,6 +2510,7 @@ GameObject:
   - component: {fileID: 1374267125}
   - component: {fileID: 1374267126}
   - component: {fileID: 1374267127}
+  - component: {fileID: 1374267128}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -2664,8 +2665,22 @@ MonoBehaviour:
   Granage: {fileID: 4751876505278523007, guid: 906325530edf1a24b95268c0dadbda7e, type: 3}
   SkillMoveSpeed_E: 20
   SkillMoveSpeed_Q: 15.5
-  maxCount_Q: 4
   coolTime_E: 13
+--- !u!114 &1374267128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374267118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12aefca4fe82b244a019be2a307be81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCount_Q: 4
+  chainReleasedTime: 3
+  toxicDamage: 130
 --- !u!1 &1446366522
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,7 +3070,7 @@ GameObject:
   - component: {fileID: 1682473032}
   - component: {fileID: 1682473031}
   - component: {fileID: 1682473030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3278,7 +3293,7 @@ GameObject:
   - component: {fileID: 1755369176}
   - component: {fileID: 1755369175}
   - component: {fileID: 1755369174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3743,6 +3758,75 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &1883780953
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1128758269040250, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_Name
+      value: Polygonal Metalon Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444695180855720, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
 --- !u!1 &1997393871
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,7 +3839,7 @@ GameObject:
   - component: {fileID: 1997393875}
   - component: {fileID: 1997393874}
   - component: {fileID: 1997393873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

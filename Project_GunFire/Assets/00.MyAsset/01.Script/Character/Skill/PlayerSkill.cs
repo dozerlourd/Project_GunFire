@@ -7,24 +7,8 @@ public class PlayerSkill : MonoBehaviour
     [SerializeField] GameObject ChainSphere, Granage;
     [SerializeField] float SkillMoveSpeed_E, SkillMoveSpeed_Q;
 
+    PlayerArousal playerArousal;
 
-    public int MaxCount_Q
-    {
-        get
-        {
-            //// 만약 각성 1이면 리턴 maxCount_Q + 4.
-            //if () return maxCount_Q;
-            //// 그렇지 않고, 각성 2이면 리턴 maxCount_Q + 8.
-            //else if () return maxCount_Q;
-            //// 그렇지 않고, 각성 3이면 리턴 maxCount_Q + 12.
-            //else if () return maxCount_Q;
-            //// 그렇지 않고, 각성 2이면 리턴 maxCount_Q.
-            //else
-            return maxCount_Q;
-        }
-    }
-    [SerializeField, Tooltip("수류탄 최대 소지량")] int maxCount_Q;
-    public int SetMaxCount_Q(int value) => maxCount_Q = value;
 
     [SerializeField] float coolTime_E;
 
@@ -40,6 +24,7 @@ public class PlayerSkill : MonoBehaviour
 
     private void Start()
     {
+        playerArousal = PlayerSystem.Instance.PlayerArousal;
         StartCoroutine(CheckTime());
         StartCoroutine(Co_SkillType_Q());
         StartCoroutine(Co_SkillType_E());
@@ -48,7 +33,7 @@ public class PlayerSkill : MonoBehaviour
         coolTimeCheck_E = new WaitUntil(() => currTimer_E >= coolTime_E);
         InputCheck_Q = new WaitUntil(() => Input.GetKeyDown(KeyCode.Q));
         InputCheck_E = new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
-        skillCount_Q = MaxCount_Q;
+        skillCount_Q = playerArousal.MaxCount_Q;
         currTimer_E = coolTime_E;
     }
 
@@ -63,13 +48,23 @@ public class PlayerSkill : MonoBehaviour
 
     IEnumerator Co_SkillType_Q()
     {
+        int BE_Count = 0;
         while (true)
         {
             if (skillCount_Q <= 0) yield return null;
             yield return SkillCountCheck_Q;
             yield return InputCheck_Q;
 
-            SetSkillCount_Q(SkillCount_Q - 1);
+            if (PlayerSystem.Instance.PlayerArousal.BackpackExpension == 3 && BE_Count == 0)
+            {
+                SetSkillCount_Q(SkillCount_Q - 1);
+                BE_Count++;
+            }
+            else if(PlayerSystem.Instance.PlayerArousal.BackpackExpension == 3 && BE_Count == 1)
+            {
+                BE_Count = 0;
+            }
+
             Debug.Log("Q");
             GameObject SkillClone = Instantiate(Granage, transform.position, Quaternion.identity);
             SkillClone.SetActive(true);

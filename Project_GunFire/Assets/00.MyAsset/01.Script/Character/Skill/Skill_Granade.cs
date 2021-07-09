@@ -9,18 +9,7 @@ public class Skill_Granade : MonoBehaviour
 
     public float PointPadDuration
     {
-        get
-        {
-            //// 만약 각성 1이면 리턴 chainReleasedTime + 4.
-            //if () return poisonPadDuration;
-            //// 그렇지 않고, 각성 2이면 리턴 chainReleasedTime + 8.
-            //else if () return poisonPadDuration;
-            //// 그렇지 않고, 각성 3이면 리턴 chainReleasedTime + 12.
-            //else if () return poisonPadDuration;
-            //// 그렇지 않고, 각성 2이면 리턴 chainReleasedTime.
-            //else
-            return poisonPadDuration;
-        }
+        get => poisonPadDuration;
     }
     [SerializeField, Tooltip("수류탄 장판의 지속시간")] float poisonPadDuration = 3.0f;
     [SerializeField] float effectDuration = 3.5f;

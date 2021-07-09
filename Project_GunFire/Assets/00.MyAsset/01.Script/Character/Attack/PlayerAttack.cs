@@ -143,7 +143,13 @@ public class PlayerAttack : MonoBehaviour
 
         if (Physics.Raycast(ray, out rayHitInfo))
         {
-            ShowFireEffect(rayHitInfo);
+            print(rayHitInfo.collider.gameObject.layer);
+            if (rayHitInfo.collider.gameObject.layer == 0 ||
+                rayHitInfo.collider.gameObject.layer == 7 ||
+                rayHitInfo.collider.gameObject.layer == 12)
+            {
+                ShowFireEffect(rayHitInfo);
+            }
 
             //»˜∆ÆΩ∫ƒµ ¿Ã∆Â∆Æ ª’ª’
 
@@ -169,7 +175,13 @@ public class PlayerAttack : MonoBehaviour
 
         if (Physics.Raycast(ray, out rayHitInfo))
         {
-            ShowFireEffect(rayHitInfo);
+            print(rayHitInfo.collider.gameObject.layer);
+            if (rayHitInfo.collider.gameObject.layer == 0 ||
+                rayHitInfo.collider.gameObject.layer == 7 ||
+                rayHitInfo.collider.gameObject.layer == 12)
+            {
+                ShowFireEffect(rayHitInfo);
+            }
 
             //∑π¿Ã¿˙ ¿Ã∆Â∆Æ ª’ª’
 
