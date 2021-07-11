@@ -9,11 +9,16 @@ public class Test : MonoBehaviour
     WaitForEndOfFrame sf = new WaitForEndOfFrame();
 
     [SerializeField] GameObject Enemy;
+    [SerializeField] GameObject particle;
     EnemyHP enemyHP;
+    EnemyFSM enemyFSM;
     private void Start()
     {
-        StartCoroutine(DamagedPlayer(dmg));
-         enemyHP = Enemy.GetComponent<EnemyHP>();
+        //StartCoroutine(DamagedPlayer(dmg));
+        StartCoroutine(dt());
+        enemyHP = Enemy.GetComponent<EnemyHP>();
+        enemyFSM = Enemy.GetComponent<EnemyFSM>();
+
     }
 
     IEnumerator DamagedPlayer(float _dmg)
@@ -24,5 +29,12 @@ public class Test : MonoBehaviour
             enemyHP.TakeDamage = _dmg;
             if (PlayerSystem.Instance.Player) PlayerSystem.Instance.PlayerHP.TakeDamage = _dmg;
         }
+    }
+
+    IEnumerator dt()
+    {
+        yield return new WaitForSeconds(1.0f);
+        enemyFSM.EnemyTakeDamage(enemyHP.CurrentHP + enemyHP.CurrentSheild, Vector3.zero);
+        Instantiate(particle, enemyHP.transform.position, Quaternion.identity);
     }
 }
