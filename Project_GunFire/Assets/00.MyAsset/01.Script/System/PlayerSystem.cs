@@ -9,7 +9,7 @@ public class PlayerSystem : SceneObject<PlayerSystem>
     PlayerSkill m_playerSkill;
     PlayerAttack m_playerAttack;
     PlayerMove m_playerMove;
-    PlayerLootingWeapon m_playerLootingWeapon;
+    PlayerLootingItem m_playerLootingWeapon;
     PlayerArousal m_playerArousal;
 
     public GameObject Player => m_player;
@@ -17,7 +17,7 @@ public class PlayerSystem : SceneObject<PlayerSystem>
     public PlayerSkill PlayerSkill => m_playerSkill = m_playerSkill ? m_playerSkill : Player.GetComponent<PlayerSkill>();
     public PlayerAttack PlayerAttack => m_playerAttack = m_playerAttack ? m_playerAttack : Player.GetComponent<PlayerAttack>();
     public PlayerMove PlayerMove => m_playerMove = m_playerMove ? m_playerMove : Player.GetComponent<PlayerMove>();
-    public PlayerLootingWeapon PlayerLootingWeapon => m_playerLootingWeapon = m_playerLootingWeapon ? m_playerLootingWeapon : Player.GetComponent<PlayerLootingWeapon>();
+    public PlayerLootingItem PlayerLootingWeapon => m_playerLootingWeapon = m_playerLootingWeapon ? m_playerLootingWeapon : Player.GetComponent<PlayerLootingItem>();
     public PlayerArousal PlayerArousal => m_playerArousal = m_playerArousal ? m_playerArousal : Player.GetComponent<PlayerArousal>();
 }
     

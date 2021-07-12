@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerArousal : MonoBehaviour
+public class PlayerArousal : SceneObject<PlayerArousal>
 {
     #region Elemental
     #endregion
@@ -34,9 +34,7 @@ public class PlayerArousal : MonoBehaviour
 
     private void Start()
     {
-        UpgradeToxicSmoke();
-        UpgradeToxicSmoke();
-        UpgradeToxicSmoke();
+
     }
 
     public int MaxCount_Q

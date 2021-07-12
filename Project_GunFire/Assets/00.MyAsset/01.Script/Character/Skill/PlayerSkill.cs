@@ -64,6 +64,10 @@ public class PlayerSkill : MonoBehaviour
             {
                 BE_Count = 0;
             }
+            else
+            {
+                SetSkillCount_Q(SkillCount_Q - 1);
+            }
 
             Debug.Log("Q");
             GameObject SkillClone = Instantiate(Granage, transform.position, Quaternion.identity);
