@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - T_Enemy
-  - FxTemporaire
-  - T_Ground
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -15,13 +12,13 @@ TagManager:
   - Water
   - UI
   - L_Weapon
-  - L_Enemy
-  - L_Player
-  - L_PlayerSkill
-  - L_PlayerBullet
-  - L_PlayerSkill_Granade
-  - L_Ground
-  - L_Chest
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
