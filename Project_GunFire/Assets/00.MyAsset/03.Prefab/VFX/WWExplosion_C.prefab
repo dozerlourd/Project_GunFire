@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 637380411522312517}
   - component: {fileID: 726544794659908381}
   - component: {fileID: 726102920034036243}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4723,7 +4723,7 @@ GameObject:
   - component: {fileID: 637460276838201011}
   - component: {fileID: 727303625897294933}
   - component: {fileID: 726053032584493643}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Smoke Bulk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9327,7 +9327,7 @@ GameObject:
   - component: {fileID: 637491267511856607}
   - component: {fileID: 673089425067348855}
   - component: {fileID: 666741092429351373}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9437,7 +9437,7 @@ GameObject:
   - component: {fileID: 632417756763548501}
   - component: {fileID: 726546513058535327}
   - component: {fileID: 726279991513337057}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14150,7 +14150,7 @@ GameObject:
   - component: {fileID: 727003933338001717}
   - component: {fileID: 726422379247768183}
   - component: {fileID: 667084212809628401}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WWExplosion_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18894,7 +18894,7 @@ GameObject:
   - component: {fileID: 637267314626818331}
   - component: {fileID: 727074169463411625}
   - component: {fileID: 725463578113491351}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23606,7 +23606,7 @@ GameObject:
   - component: {fileID: 632667251229454975}
   - component: {fileID: 750019235852859051}
   - component: {fileID: 725416286466567441}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28318,7 +28318,7 @@ GameObject:
   - component: {fileID: 632383273267938423}
   - component: {fileID: 726616663573636603}
   - component: {fileID: 725796949323310485}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33030,7 +33030,7 @@ GameObject:
   - component: {fileID: 637674252174160883}
   - component: {fileID: 749978535776586827}
   - component: {fileID: 726113681685165049}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37742,7 +37742,7 @@ GameObject:
   - component: {fileID: 637624578410266203}
   - component: {fileID: 726564278327225863}
   - component: {fileID: 726241273976230749}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42454,7 +42454,7 @@ GameObject:
   - component: {fileID: 632524765459134627}
   - component: {fileID: 726620915861025921}
   - component: {fileID: 725874746726558703}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47166,7 +47166,7 @@ GameObject:
   - component: {fileID: 632550904658708215}
   - component: {fileID: 726826782840609095}
   - component: {fileID: 725927826254935463}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Inner Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51869,7 +51869,7 @@ GameObject:
   - component: {fileID: 632280580460074865}
   - component: {fileID: 726521664690173877}
   - component: {fileID: 725757833565176183}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56581,7 +56581,7 @@ GameObject:
   - component: {fileID: 632274793170912903}
   - component: {fileID: 726721121915979961}
   - component: {fileID: 726103485889397043}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61293,7 +61293,7 @@ GameObject:
   - component: {fileID: 637349155941489851}
   - component: {fileID: 726682505671971993}
   - component: {fileID: 725864525456416277}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66005,7 +66005,7 @@ GameObject:
   - component: {fileID: 637461000831842273}
   - component: {fileID: 727071465718112507}
   - component: {fileID: 726414292448499699}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70717,7 +70717,7 @@ GameObject:
   - component: {fileID: 632203963440770581}
   - component: {fileID: 726733034068761725}
   - component: {fileID: 725421168919882319}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75429,7 +75429,7 @@ GameObject:
   - component: {fileID: 632629371085203041}
   - component: {fileID: 750058101699571659}
   - component: {fileID: 725690786104253955}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80141,7 +80141,7 @@ GameObject:
   - component: {fileID: 637796390499438167}
   - component: {fileID: 726808123778299245}
   - component: {fileID: 725808163507954435}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84853,7 +84853,7 @@ GameObject:
   - component: {fileID: 637270288618801289}
   - component: {fileID: 726557888438630207}
   - component: {fileID: 726121635353985095}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SmokeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

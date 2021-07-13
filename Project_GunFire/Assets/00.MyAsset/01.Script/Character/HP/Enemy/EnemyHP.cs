@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class EnemyHP : HPController
 {
+    [SerializeField] GameObject damageText;
+
     public override float TakeDamage
     {
         set
         {
+            DamageText _damageText = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageText>();
+            _damageText.SetDamageText((int)value);
+
             if (CurrentSheild <= 0)
             {
                 CurrentHP -= value;
@@ -23,6 +28,11 @@ public class EnemyHP : HPController
                 SheildDamage = value;
             }
         }
+    }
+
+    private new void Start()
+    {
+        base.Start();
     }
 
     public override float SheildDamage { set => CurrentSheild -= value; }

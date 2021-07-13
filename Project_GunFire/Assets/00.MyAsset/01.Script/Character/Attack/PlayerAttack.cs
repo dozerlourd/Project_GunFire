@@ -43,12 +43,12 @@ public class PlayerAttack : MonoBehaviour
             // 6. 애니메이션 적용 (프로토타입 일정 후 구현 예정)
             currTimer = 0.0f; //7.
             #region 무기 정보 디버깅
-            Debug.Log(string.Format("무기 이름: {0} \n발사 타입: {1} \n무기 공격력: {2} \n최대 탄창 크기: {3}" +
-                "\n재장전까지 걸리는 속도: {4} \n 초당 공격 속도: {5} \n 치명타 확률: {6}" +
-                "\n 치명타 배수: {7} \n 이동속도 증감률: {8}", weaponSystem.CurrWeapon.weaponName, weaponSystem.CurrWeapon.E_WeaponType,
-                weaponSystem.CurrWeapon.attackDamage, weaponSystem.CurrWeapon.maxAmmo,
-                weaponSystem.CurrWeapon.reloadTime, weaponSystem.CurrWeapon.rateOfFire,
-                weaponSystem.CurrWeapon.criticalRate, weaponSystem.CurrWeapon.criticalMultiflier, weaponSystem.CurrWeapon.moveSpeedRate));
+            //Debug.Log(string.Format("무기 이름: {0} \n발사 타입: {1} \n무기 공격력: {2} \n최대 탄창 크기: {3}" +
+            //    "\n재장전까지 걸리는 속도: {4} \n 초당 공격 속도: {5} \n 치명타 확률: {6}" +
+            //    "\n 치명타 배수: {7} \n 이동속도 증감률: {8}", weaponSystem.CurrWeapon.weaponName, weaponSystem.CurrWeapon.E_WeaponType,
+            //    weaponSystem.CurrWeapon.attackDamage, weaponSystem.CurrWeapon.maxAmmo,
+            //    weaponSystem.CurrWeapon.reloadTime, weaponSystem.CurrWeapon.rateOfFire,
+            //    weaponSystem.CurrWeapon.criticalRate, weaponSystem.CurrWeapon.criticalMultiflier, weaponSystem.CurrWeapon.moveSpeedRate));
             #endregion
         }
     }
@@ -122,8 +122,7 @@ public class PlayerAttack : MonoBehaviour
     float GetFinalDamage()
     {
         float _dmg = weaponSystem.CurrWeapon.attackDamage;
-        _dmg *= CriticalCheck() ? weaponSystem.CurrWeapon.criticalMultiflier / 100 : 1;
-        //Debug.Log(_dmg);
+        _dmg *= CriticalCheck() ? (weaponSystem.CurrWeapon.criticalMultiflier / 100) : 1;
         return _dmg;
     }
 
@@ -139,17 +138,14 @@ public class PlayerAttack : MonoBehaviour
     void HitscanAttack(float _dmg)
     {
         RaycastHit rayHitInfo;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition + new Vector3(Random.Range(0, weaponSystem.CurrWeapon.fireSpreadRate), Random.Range(0, weaponSystem.CurrWeapon.fireSpreadRate), 0));
-
-        if (Physics.Raycast(ray, out rayHitInfo))
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition + new Vector3(
+                  Random.Range(0, weaponSystem.CurrWeapon.fireSpreadRate),
+                  Random.Range(0, weaponSystem.CurrWeapon.fireSpreadRate), 0));
+        
+        if (Physics.Raycast(ray, out rayHitInfo, 1 << 0 | 1 << 7 | 1 << 12))
         {
-            print(rayHitInfo.collider.gameObject.layer);
-            if (rayHitInfo.collider.gameObject.layer == 0 ||
-                rayHitInfo.collider.gameObject.layer == 7 ||
-                rayHitInfo.collider.gameObject.layer == 12)
-            {
-                ShowFireEffect(rayHitInfo);
-            }
+            print(rayHitInfo.collider.name);
+            ShowFireEffect(rayHitInfo);
 
             //히트스캔 이펙트 뿜뿜
 
@@ -173,7 +169,7 @@ public class PlayerAttack : MonoBehaviour
         RaycastHit rayHitInfo;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out rayHitInfo))
+        if (Physics.Raycast(ray, out rayHitInfo, 1 << 0 | 1 << 7 | 1 << 12))
         {
             print(rayHitInfo.collider.gameObject.layer);
             if (rayHitInfo.collider.gameObject.layer == 0 ||
@@ -202,15 +198,7 @@ public class PlayerAttack : MonoBehaviour
 
 
 
-    //void RayTypeScanEnemy()
-    //{
-    //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-    //    if (Physics.Raycast(ray, out _rayHitInfo))
-    //    {
-            
-    //    }
-    //}
+    
 
     void ShowFireEffect(RaycastHit _rayHit)
     {

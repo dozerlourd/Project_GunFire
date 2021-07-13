@@ -118,7 +118,7 @@ public class EnemyFSM : MonoBehaviour
         }
         if (isDamaged && (eState == EnemyState.Idle || eState == EnemyState.Move))
         {
-            agent.SetDestination(player.position);
+            if(agent.enabled == true) agent.SetDestination(player.position);
         }
 
         if (isDamaged)
@@ -143,7 +143,8 @@ public class EnemyFSM : MonoBehaviour
         if (sightRange >= distance)
         {
             // 이동 상태로 전환한다.
-            co = StartCoroutine(SetMoveState());
+            eState = EnemyState.Move;
+            enemyAnim.SetTrigger("IdleToMove");
         }
     }
 
@@ -152,26 +153,28 @@ public class EnemyFSM : MonoBehaviour
 
     protected void Move()
     {
-        agent.enabled = true;
-
-        //플레이어의 위치를 NavMesh의 목적지로 설정한다
-        agent.SetDestination(player.position);
-        //다시 move로 전환할때
-        agent.isStopped = false;
-
-        float dist = Vector3.Distance(player.position, transform.position);
-        if (dist <= attackRange)
+        if(enemyAnim.GetCurrentAnimatorStateInfo(0).IsName("Move State"))
         {
-            eState = EnemyState.Attack;
-            enemyAnim.SetTrigger("MoveToAttack");
-            agent.enabled = false;
-        }
-        //else if(dist < sightRange)
-        //{
-        //    enemyAnim.SetTrigger("Idle");
-        //    eState = EnemyState.Idle;
-        //}
+            agent.enabled = true;
 
+            //플레이어의 위치를 NavMesh의 목적지로 설정한다
+            agent.SetDestination(player.position);
+            //다시 move로 전환할때
+            agent.isStopped = false;
+
+            float dist = Vector3.Distance(player.position, transform.position);
+            if (dist <= attackRange)
+            {
+                eState = EnemyState.Attack;
+                enemyAnim.SetTrigger("MoveToAttack");
+                agent.enabled = false;
+            }
+            //else if(dist < sightRange)
+            //{
+            //    enemyAnim.SetTrigger("Idle");
+            //    eState = EnemyState.Idle;
+            //}
+        }
     }
 
     protected void AttackDamaged()
@@ -193,8 +196,9 @@ public class EnemyFSM : MonoBehaviour
         // 만일, 플레이어가 공격 범위 이내라면...
         if (Vector3.Distance(player.position, transform.position) < attackRange)
         {
-            if (co != null) StopCoroutine(co);
-            // 매 1초마다 타겟의 체력을 나의 공격력만큼 감소시킨다.
+            if(isBooked && co != null) StopCoroutine(co);
+
+            // 매 delayTime이 지나갈 때마다 타겟의 체력을 나의 공격력만큼 감소시킨다.
             if (currentTime > delayTime)
             {
                 currentTime = 0;
@@ -205,10 +209,10 @@ public class EnemyFSM : MonoBehaviour
                 currentTime += Time.deltaTime;
             }
         }
-        // 공격 범위 밖이라면...
+        //공격 범위 밖이라면...
         else
         {
-            if(!isBooked)
+            if (!isBooked)
             {
                 // 1.5초 뒤에 이동 상태로 전환한다.
                 co = StartCoroutine(SetMoveState());
@@ -217,16 +221,19 @@ public class EnemyFSM : MonoBehaviour
         }
     }
 
+    /// <summary> 공격 후 일정 조건이 만족하면 이동 상태로 상태를 전환해주는 함수 </summary>
     protected IEnumerator SetMoveState()
     {
-        //print("d");
-        yield return new WaitForSeconds(1.0f);
+        // 현재 애니메이션이 Attack State일 때까지 대기 한 후, Attack State가 모두 실행된 후에 상태를 전환한다.
+        yield return new WaitUntil(() => enemyAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack State"));
+        yield return new WaitWhile(() => enemyAnim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
 
         // 이동 상태로 전환한다.
         eState = EnemyState.Move;
 
         // 이동 애니메이션을 실행한다.
         enemyAnim.SetTrigger("IdleToMove");
+
         isBooked = false;
     }
 

@@ -27,15 +27,15 @@ public class PlayerArousal : SceneObject<PlayerArousal>
     int lv_PowerSource = 0;
     #endregion
 
-    public void UpgradeBackpackExpension() => Mathf.Clamp(lv_BackpackExpension++, 0, 3);
-    public void UpgradeToxicSmoke() => Mathf.Clamp(lv_ToxicSmoke++, 0, 3);
-    public void UpgradeEnchantmentLast() => Mathf.Clamp(lv_EnchantmentLast++, 0, 3);
-    public void UpgradePowerSource() => Mathf.Clamp(lv_PowerSource++, 0, 3);
-
-    private void Start()
+    public void UpgradeBackpackExpension()
     {
-
+        lv_BackpackExpension = Mathf.Clamp(++lv_BackpackExpension, 0, 3);
+        PlayerSystem.Instance.PlayerSkill.SetSkillCount_Q(PlayerSystem.Instance.PlayerSkill.SkillCount_Q + 4);
     }
+
+    public void UpgradeToxicSmoke() => lv_ToxicSmoke = Mathf.Clamp(++lv_ToxicSmoke, 0, 3);
+    public void UpgradeEnchantmentLast() => lv_EnchantmentLast = Mathf.Clamp(++lv_EnchantmentLast, 0, 3);
+    public void UpgradePowerSource() => lv_PowerSource = Mathf.Clamp(++lv_PowerSource, 0, 3);
 
     public int MaxCount_Q
     {

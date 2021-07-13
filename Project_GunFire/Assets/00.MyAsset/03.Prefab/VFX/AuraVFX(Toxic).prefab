@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2798722602186508708}
   - component: {fileID: 2798722602200665316}
   - component: {fileID: 2798722602200642884}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Runic Aura CCW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4831,7 +4831,7 @@ GameObject:
   - component: {fileID: 2798722602186508710}
   - component: {fileID: 2798722602200665318}
   - component: {fileID: 2798722602200642886}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ground Aura Pulse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9651,7 +9651,7 @@ GameObject:
   - component: {fileID: 2798722602186508706}
   - component: {fileID: 2798722602200665314}
   - component: {fileID: 2798722602200642882}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14350,7 +14350,7 @@ GameObject:
   - component: {fileID: 2798722602186508704}
   - component: {fileID: 2798722602200665312}
   - component: {fileID: 2798722602200642880}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Runic Aura CW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19172,7 +19172,7 @@ GameObject:
   - component: {fileID: 2798722602200642890}
   - component: {fileID: 7189645681218736551}
   - component: {fileID: 597564171}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AuraVFX(Toxic)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
