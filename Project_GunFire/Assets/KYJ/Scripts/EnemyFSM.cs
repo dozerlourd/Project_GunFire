@@ -116,26 +116,22 @@ public class EnemyFSM : MonoBehaviour
                 Attack();
                 break;
         }
-        if (isDamaged && (eState == EnemyState.Idle || eState == EnemyState.Move))
-        {
-            if(agent.enabled == true) agent.SetDestination(player.position);
-        }
 
         if (isDamaged)
         {
             if (eState == EnemyState.Idle || eState == EnemyState.Move)
             {
+                agent.enabled = true;
+                eState = EnemyState.Move;
                 enemyAnim.SetTrigger("IdleToMove");
-
-                if (agent.enabled == false) return;
-
-                agent.SetDestination(player.position);
             }
+            if (agent.enabled == false) return;
         }
     }
 
     protected void Idle()
     {
+        agent.enabled = false;
         // 만일, 시야 범위에 플레이어가 있으면 이동 상태로 전환한다.
         // 필요 요소: 시야 범위, 플레이어와 나와의 거리, 플레이어
         float distance = (player.position - transform.position).magnitude;
@@ -147,9 +143,6 @@ public class EnemyFSM : MonoBehaviour
             enemyAnim.SetTrigger("IdleToMove");
         }
     }
-
-
-
 
     protected void Move()
     {
@@ -169,12 +162,18 @@ public class EnemyFSM : MonoBehaviour
                 enemyAnim.SetTrigger("MoveToAttack");
                 agent.enabled = false;
             }
-            //else if(dist < sightRange)
+            //else if (dist > sightRange)
             //{
-            //    enemyAnim.SetTrigger("Idle");
-            //    eState = EnemyState.Idle;
+            //    StartCoroutine(SetIdleState());
             //}
         }
+    }
+
+    IEnumerator SetIdleState()
+    {
+        yield return new WaitForSeconds(0.05f);
+        enemyAnim.SetTrigger("Idle");
+        eState = EnemyState.Idle;
     }
 
     protected void AttackDamaged()
