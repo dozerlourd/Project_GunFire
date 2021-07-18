@@ -9,14 +9,13 @@ public class PlayerSkill : MonoBehaviour
 
     PlayerArousal playerArousal;
 
-
+    public float CoolTime_E => coolTime_E;
     [SerializeField] float coolTime_E;
 
-    public int SkillCount_Q
-    {
-        get => skillCount_Q;
-    }
+    public int SkillCount_Q => skillCount_Q;
     int skillCount_Q = 0;
+
+    public float CurrTimer_E => currTimer_E;
     float currTimer_E = 0f;
     public void SetSkillCount_Q(int value) => skillCount_Q = value;
 

@@ -13,17 +13,17 @@ public class EnemyHP : HPController
             DamageText _damageText = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageText>();
             _damageText.SetDamageText((int)value);
 
-            if (CurrentSheild <= 0)
+            if (CurrentShield <= 0)
             {
                 CurrentHP -= value;
             }
-            else if (CurrentSheild - value <= 0)
+            else if (CurrentShield - value <= 0)
             {
-                float temp = value -= CurrentSheild;
-                CurrentSheild = 0;
+                float temp = value -= CurrentShield;
+                CurrentShield = 0;
                 CurrentHP -= temp;
             }
-            else if (CurrentSheild - value > 0)
+            else if (CurrentShield - value > 0)
             {
                 SheildDamage = value;
             }
@@ -35,7 +35,7 @@ public class EnemyHP : HPController
         base.Start();
     }
 
-    public override float SheildDamage { set => CurrentSheild -= value; }
+    public override float SheildDamage { set => CurrentShield -= value; }
 
     protected override bool Damage(ref float setHP) => false;
 

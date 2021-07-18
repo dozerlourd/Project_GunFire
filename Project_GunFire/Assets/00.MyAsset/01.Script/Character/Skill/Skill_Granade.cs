@@ -39,7 +39,6 @@ public class Skill_Granade : MonoBehaviour
         GameObject effectClone = Instantiate(granadeVFX);
         effectClone.transform.position = transform.position;
         Destroy(effectClone, effectDuration);
-        //gameObject.SetActive(false);
         Destroy(gameObject);
         yield return null;
     }

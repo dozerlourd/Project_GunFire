@@ -6,13 +6,13 @@ public abstract class HPController : MonoBehaviour
     bool isDeath = false;
 
     [SerializeField] float m_maxHP;
-    [SerializeField] float m_maxSheild;
+    [SerializeField] float m_maxShield;
     float m_currentHP;
-    float m_currentSheild;
+    float m_currentShield;
 
     public float MaxHP { get => m_maxHP; protected set => m_maxHP = value; }
 
-    public float MaxSheild { get => m_maxSheild; protected set => m_maxSheild = value; }
+    public float MaxShield { get => m_maxShield; protected set => m_maxShield = value; }
 
     public float CurrentHP
     {
@@ -31,18 +31,18 @@ public abstract class HPController : MonoBehaviour
         }
     }
 
-    public float CurrentSheild
+    public float CurrentShield
     {
-        get => m_currentSheild; set
+        get => m_currentShield; set
         {
-            m_currentSheild = value;
+            m_currentShield = value;
         }
     }
 
     protected void Start()
     {
         CurrentHP = MaxHP;
-        CurrentSheild = MaxSheild;
+        CurrentShield = MaxShield;
     }
 
     protected virtual void Generation()

@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector3 dir;
 
     //중력
-    private float gravity = -20f;
+    private float gravity = -9.81f;
 
     float dir_y;
 
@@ -30,8 +30,14 @@ public class PlayerMovement : MonoBehaviour
     Coroutine Co_InitSpeed;
     [SerializeField] float dashSpeed;
     WaitForSeconds initSpeedTime;
+
+    public float DashCooltime => dashCooltime;
     [SerializeField] float dashCooltime;
+
+    public float CurrDashCooltime => currDashCooltime;
     float currDashCooltime = 0;
+
+    bool isMove = false;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
         finalMoveSpeed = moveSpeed;
         initSpeedTime = new WaitForSeconds(dashSpeed);
         StartCoroutine(DashCheck());
+        StartCoroutine(MoveSound());
     }
 
     // Update is called once per frame
@@ -60,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         dir.Normalize();
         dir = transform.TransformDirection(dir);
 
+        isMove = h != 0 || v != 0 ? true : false;
         Gravity();
 
         finalMoveSpeed = isMovingFast ? (moveSpeed * speedAdjust) : moveSpeed;
@@ -135,5 +143,18 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return initSpeedTime;
         isMovingFast = false;
+    }
+
+    [SerializeField] AudioClip[] footstepClip;
+
+    IEnumerator MoveSound()
+    {
+        while (true)
+        {
+            float seconds = isMovingFast ? 0.15f : 0.3f;
+            yield return new WaitForSeconds(seconds);
+            yield return new WaitUntil(() => isMove && cc.isGrounded);
+            SoundManager.Instance.PlayOneShot(footstepClip[UnityEngine.Random.Range(0, footstepClip.Length)], 0.4f);
+        }
     }
 }

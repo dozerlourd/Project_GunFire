@@ -58,9 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e221daba274c444925683286336f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PressE: 0
-  gravityScale: 0
-  E_ItemType: 0
+  E_ItemType: 1
   _weaponNum: 1002
 --- !u!1001 &3318125094876937339
 PrefabInstance:

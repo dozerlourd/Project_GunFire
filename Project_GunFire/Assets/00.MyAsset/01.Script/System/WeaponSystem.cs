@@ -23,13 +23,11 @@ public class Weapon
     [Tooltip("치명타 배수 (100.0f ~ 500.0f)"), Range(100.0f, 500.0f)] public float criticalMultiflier;
     [Tooltip("이동속도 증감률 (-100.0f ~ 100.0f)"), Range(-100.0f, 100.0f)] public float moveSpeedRate;
     [Tooltip("탄퍼짐 수치 - Hitscan 무기만 취급 (?f ~ ?f)"), /*Range(-100.0f, 100.0f)*/] public float fireSpreadRate;
-    //[] public WeaponUI 
-}
-
-
-public class WeaponUI
-{
-
+    [Tooltip("무기 사운드")] public AudioClip audioClip;
+    [Tooltip("무기 텍스처")] public GameObject weaponTexture;
+    [Tooltip("무기 UI 이미지")] public Sprite weaponSprite;
+    [Tooltip("무기 피격 이펙트")] public GameObject hitEffect;
+    [Tooltip("무기 총알")] public GameObject projectiveBullet;
 }
 
 public class WeaponSystem : SceneObject<WeaponSystem>

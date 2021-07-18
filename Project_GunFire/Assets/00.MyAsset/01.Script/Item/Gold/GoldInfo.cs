@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class GoldInfo : ItemInfo
 {
+    [SerializeField] int minGold, maxGold;
+    [SerializeField] AudioClip goldClip;
 
-    protected override float GravityScale()
-    {
-        return 0;
-    }
+    public int Gold() => Random.Range(minGold, maxGold + 1);
 
-    protected override Vector3 GravityDirection()
+    void OnTriggerEnter(Collider col)
     {
-        return Vector3.zero;
+        if (col.gameObject.tag == "T_Player")
+        {
+            SoundManager.Instance.PlayOneShot(goldClip, 0.4f);
+            GoldManager.SetGoldAmount(GetComponent<GoldInfo>().Gold());
+            Destroy(gameObject);
+        }
     }
 }

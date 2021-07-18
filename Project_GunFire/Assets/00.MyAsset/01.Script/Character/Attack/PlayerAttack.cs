@@ -7,8 +7,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Animator crosshairAnim;
     WeaponSystem weaponSystem;
 
-    [SerializeField] GameObject bullet;
-    [Tooltip("피격 이펙트"), SerializeField] GameObject fireEffect;
+    [SerializeField] Transform firePos;
 
     /// <summary> 무기의 초당 발사 횟수인 rateOfFire을 초 단위로 변환하여 계산한 값 </summary>
     float coolTime => 1 / WeaponSystem.Instance.CurrWeapon.rateOfFire;
@@ -26,9 +25,8 @@ public class PlayerAttack : MonoBehaviour
     /// 2. 탄창 확인 후, 탄창에 총알이 없을 경우, 재장전이 될 때까지 대기
     /// 3. 입력 체크 -> 공격 입력이 들어왔을 경우, 4번으로
     /// 4. 남아있는 총알의 개수 체크 -> 남아있지 않을 경우, 재장전까지 대기
-    /// 5. 
-    /// 6. 애니메이션 및 최종 데미지로 Enemy에게 피해를 주는 로직 구현 예정
-    /// 7. 타이머에 누적된 값을 초기화시켜준다.
+    /// 5. 최종 데미지 계산 및 적에게 피해 적용 -> 함수를 통하여 무기 타입에 따라 다르게 구현
+    /// 6. 타이머에 누적된 값을 초기화시켜준다.
     IEnumerator Fire()
     {
         StartCoroutine(CheckTime());
@@ -37,19 +35,12 @@ public class PlayerAttack : MonoBehaviour
             yield return new WaitUntil(() => currTimer >= coolTime); // 1.
             yield return new WaitUntil(() => AmmoCheck()); // 2. 재장전이 될 때까지 대기
             yield return new WaitUntil(() => Input.GetButton("Fire1")); // 3.
+            if (weaponSystem.CurrWeapon.E_WeaponType == Weapon.WeaponType.Laser) SoundManager.Instance.WeaponSound(1.0f);
+            else SoundManager.Instance.WeaponSound(0.3f);
             weaponSystem.CurrWeapon.currAmmo = Mathf.Clamp(--weaponSystem.CurrWeapon.currAmmo, 0, weaponSystem.CurrWeapon.maxAmmo); // 4.
             //if (!AmmoCheck()) yield return StartCoroutine(Reload()); //미장전 상태일 경우 (탄창에 현재 총알이 0일 경우) Reload 함수 실행
             Attack(GetFinalDamage()); // 5. 최종 데미지 계산 및 적에게 피해 적용 (Enemy에게 피해를 주는 로직은 구현 예정에 있음)
-            // 6. 애니메이션 적용 (프로토타입 일정 후 구현 예정)
-            currTimer = 0.0f; //7.
-            #region 무기 정보 디버깅
-            //Debug.Log(string.Format("무기 이름: {0} \n발사 타입: {1} \n무기 공격력: {2} \n최대 탄창 크기: {3}" +
-            //    "\n재장전까지 걸리는 속도: {4} \n 초당 공격 속도: {5} \n 치명타 확률: {6}" +
-            //    "\n 치명타 배수: {7} \n 이동속도 증감률: {8}", weaponSystem.CurrWeapon.weaponName, weaponSystem.CurrWeapon.E_WeaponType,
-            //    weaponSystem.CurrWeapon.attackDamage, weaponSystem.CurrWeapon.maxAmmo,
-            //    weaponSystem.CurrWeapon.reloadTime, weaponSystem.CurrWeapon.rateOfFire,
-            //    weaponSystem.CurrWeapon.criticalRate, weaponSystem.CurrWeapon.criticalMultiflier, weaponSystem.CurrWeapon.moveSpeedRate));
-            #endregion
+            currTimer = 0.0f; //6. 타이머에 누적된 값을 초기화시켜준다.
         }
     }
 
@@ -89,6 +80,8 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && weaponSystem.CurrWeapon.currAmmo == 0)
         {
             //SoundManager.Instance.EmptyAmmoSound(); // 비어있는 탄창 사운드
+            if (Co_Reload != null) StopCoroutine(Co_Reload);
+            Co_Reload = StartCoroutine(Reload());
         }
         return weaponSystem.CurrWeapon.currAmmo != 0 ? true : false;
     }
@@ -144,7 +137,7 @@ public class PlayerAttack : MonoBehaviour
         
         if (Physics.Raycast(ray, out rayHitInfo, 1 << 0 | 1 << 7 | 1 << 12))
         {
-            print(rayHitInfo.collider.name);
+            //print(rayHitInfo.collider.name);
             ShowFireEffect(rayHitInfo);
 
             //히트스캔 이펙트 뿜뿜
@@ -161,7 +154,20 @@ public class PlayerAttack : MonoBehaviour
 
     void ProjectiveAttack(float _dmg)
     {
+        RaycastHit rayHitInfo;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Vector3 _dir;
 
+        GameObject _bulletClone = Instantiate(weaponSystem.CurrWeapon.projectiveBullet);
+        if (Physics.Raycast(ray, out rayHitInfo))
+        {
+            _dir = rayHitInfo.transform.position - firePos.position;
+        }
+            
+            _bulletClone.transform.position = firePos.position;
+            _bulletClone.transform.forward = firePos.forward;
+        
+        _bulletClone.GetComponent<BulletAttack>().SetBulletDamage = _dmg;
     }
 
     void LaserAttack(float _dmg)
@@ -171,7 +177,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (Physics.Raycast(ray, out rayHitInfo, 1 << 0 | 1 << 7 | 1 << 12))
         {
-            print(rayHitInfo.collider.gameObject.layer);
+            //print(rayHitInfo.collider.gameObject.layer);
             if (rayHitInfo.collider.gameObject.layer == 0 ||
                 rayHitInfo.collider.gameObject.layer == 7 ||
                 rayHitInfo.collider.gameObject.layer == 12)
@@ -180,6 +186,7 @@ public class PlayerAttack : MonoBehaviour
             }
 
             //레이저 이펙트 뿜뿜
+            DrawLaserLine(rayHitInfo.transform.position);
 
             if (rayHitInfo.collider.tag == "T_Enemy")
             {
@@ -191,7 +198,10 @@ public class PlayerAttack : MonoBehaviour
         ShowCrosshair();
     }
 
+    void DrawLaserLine(Vector3 hitVec)
+    {
 
+    }
 
 
 
@@ -202,8 +212,8 @@ public class PlayerAttack : MonoBehaviour
 
     void ShowFireEffect(RaycastHit _rayHit)
     {
-        GameObject SFX_Clone = Instantiate(fireEffect, _rayHit.point, Quaternion.LookRotation(-_rayHit.normal));
-        Debug.DrawRay(_rayHit.point, _rayHit.normal * 100, Color.red);
+        GameObject SFX_Clone = Instantiate(weaponSystem.CurrWeapon?.hitEffect, _rayHit.point, Quaternion.LookRotation(_rayHit.normal));
+        Destroy(SFX_Clone, 1.5f);
     }
 
     void ShowCrosshair()

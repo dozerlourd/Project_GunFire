@@ -15,7 +15,7 @@ public class PlayerLootingItem : MonoBehaviour
     {
         get
         {
-            weaponInfoUIImage.color = ray ? Color.white : Color.clear;
+            //weaponInfoUIImage.color = ray ? Color.white : Color.clear;
             return weaponInfoUIImage;
         }
     }
@@ -24,7 +24,7 @@ public class PlayerLootingItem : MonoBehaviour
 
     private void Start()
     {
-        weaponInfoUIImage = weaponInfoUICanvas.transform.GetChild(0).GetComponent<Image>();
+        //weaponInfoUIImage = weaponInfoUICanvas.transform.GetChild(0).GetComponent<Image>();
     }
 
     void Update()
@@ -49,8 +49,8 @@ public class PlayerLootingItem : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if(rayHitInfo.collider.GetComponent<ItemInfo>() != null)
-                    rayHitInfo.collider.GetComponent<ItemInfo>().PressE = true;
+                if(rayHitInfo.collider.GetComponent<GoldenGoblet>() != null)
+                    rayHitInfo.collider.GetComponent<GoldenGoblet>().PressE = true;
             }
 
             if (rayHitInfo.collider.gameObject.layer == LayerMask.NameToLayer("L_Chest"))
@@ -60,19 +60,19 @@ public class PlayerLootingItem : MonoBehaviour
 
             if (rayHitInfo.collider.gameObject.layer == LayerMask.NameToLayer("L_Weapon"))
             {
-                weaponInfoUICanvas.SetActive(true);
+                //weaponInfoUICanvas.SetActive(true);
                 Vector3 UIPos = rayHitInfo.collider.transform.position + Vector3.up * UIPlusY;
                 int weaponNum = rayHitInfo.collider.GetComponent<WeaponInfo>().WeaponNum;
                 InfoAndUI InfoAndUI = WeaponInfoUISystem.Instance.Arr_WeaponInfoUI[weaponNum - 1001];
 
-                WeaponInfoUIImage.sprite = weaponNum == InfoAndUI.weaponNum ? InfoAndUI.WeaponInfoUIImage : null;
-                weaponInfoUICanvas.transform.position = UIPos;
+                //WeaponInfoUIImage.sprite = weaponNum == InfoAndUI.weaponNum ? InfoAndUI.WeaponInfoUIImage : null;
+                //weaponInfoUICanvas.transform.position = UIPos;
                 //weaponInfoUICanvas.transform.position = transform.position + transform.forward * 0.3f + transform.up * 0.05f;
 
                 if (Input.GetKeyDown(KeyCode.F)) WeaponSystem.Instance.ChangeWeapon(weaponNum);
             }
-            else weaponInfoUICanvas.SetActive(false);
+            //else weaponInfoUICanvas.SetActive(false);
         }
-        else weaponInfoUICanvas.SetActive(false);
+        //else weaponInfoUICanvas.SetActive(false);
     }
 }

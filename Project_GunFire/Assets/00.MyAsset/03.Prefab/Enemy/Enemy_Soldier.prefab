@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5403211694243112022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48033231530254856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9165bc28664c749a27700d9cfb69b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &48033232417951131
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,6 +23,7 @@ GameObject:
   - component: {fileID: 48033232417951135}
   - component: {fileID: 48033232417951129}
   - component: {fileID: 48033232417951107}
+  - component: {fileID: -5420965654028790998}
   - component: {fileID: 48033232417951132}
   - component: {fileID: 48033232417951133}
   - component: {fileID: 48033232417951106}
@@ -50,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_maxHP: 300
-  m_maxSheild: 1200
+  m_maxShield: 1200
   damageText: {fileID: 8904826618144217246, guid: c48f986f1928a0e429091de7e30dfcf0, type: 3}
 --- !u!114 &48033232417951107
 MonoBehaviour:
@@ -65,12 +78,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destEffect: {fileID: 1331877018201304985, guid: 4e5b6d3b35d77b647bb4d5b230fab1e0, type: 3}
-  rotSpeed: 20
   eState: 0
-  sightRange: 5
+  sightRange: 18
   attackRange: 1.85
   attackPower: 30
-  delayTime: 1
+  attackDelayTime: 1
+  dmg: 25
+--- !u!114 &-5420965654028790998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48033232417951131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd748733edab80f42a515a1d8334aa99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItems:
+  - item: {fileID: 3318125094772406223, guid: 412120b48e519314680c351c417ee2d9, type: 3}
+    weight: 2
+  - item: {fileID: 8979936671749219307, guid: f21fbea1b1abcac40bf06a1f0f7d3cff, type: 3}
+    weight: 5
+  - item: {fileID: 7388788318334580232, guid: 1acbff028b894a14c8039d08ac78d13a, type: 3}
+    weight: 60
+  - item: {fileID: 3394737462062735824, guid: ea057d79bfa8c1a47a4594f410cc3ac0, type: 3}
+    weight: 45
+  - item: {fileID: 0}
+    weight: 110
+  maxDropRepeat: 5
 --- !u!195 &48033232417951132
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -81,10 +118,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
-  m_Acceleration: 8
+  m_Speed: 3.5
+  m_Acceleration: 6.5
   avoidancePriority: 50
-  m_AngularSpeed: 180
+  m_AngularSpeed: 360
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -101,7 +138,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48033232417951131}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1
@@ -184,6 +221,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: fa216a540357d4133ab6420543c1c093, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
+--- !u!1 &48033231530254856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
+  m_PrefabInstance: {fileID: 48033231530353882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &48033231529967208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}

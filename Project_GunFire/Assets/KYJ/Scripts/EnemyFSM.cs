@@ -20,9 +20,6 @@ public class EnemyFSM : MonoBehaviour
         Die
     }
 
-    // 회전속도
-    public float rotSpeed = 20f;
-
     public bool IsChained
     {
         get => isChained; set
@@ -44,7 +41,8 @@ public class EnemyFSM : MonoBehaviour
     public float sightRange = 5.0f;
     public float attackRange = 2.0f;
     public int attackPower = 30;
-    public float delayTime = 1.0f;
+    public float attackDelayTime = 1.0f;
+    [SerializeField] float dmg;
 
     protected Transform player;
     protected float currentTime = 0;
@@ -61,6 +59,8 @@ public class EnemyFSM : MonoBehaviour
 
     protected void Start()
     {
+        isDamaged = true;
+
         // 시작하면 maxHp로 체력 초기healthPoint;
         //healthPoint = maxHp;
 
@@ -161,6 +161,7 @@ public class EnemyFSM : MonoBehaviour
                 eState = EnemyState.Attack;
                 enemyAnim.SetTrigger("MoveToAttack");
                 agent.enabled = false;
+                currentTime = attackDelayTime;
             }
             //else if (dist > sightRange)
             //{
@@ -186,7 +187,7 @@ public class EnemyFSM : MonoBehaviour
         else
         {
             enemyAnim.SetTrigger("Hit");
-            eState = EnemyState.Idle;
+            eState = EnemyState.Move;
         }
     }
 
@@ -198,10 +199,11 @@ public class EnemyFSM : MonoBehaviour
             if(isBooked && co != null) StopCoroutine(co);
 
             // 매 delayTime이 지나갈 때마다 타겟의 체력을 나의 공격력만큼 감소시킨다.
-            if (currentTime > delayTime)
+            if (currentTime > attackDelayTime)
             {
-                currentTime = 0;
+                //GetDamageToPlayer();
                 enemyAnim.SetTrigger("DelayToAttack");
+                currentTime = 0;
             }
             else
             {
@@ -239,7 +241,7 @@ public class EnemyFSM : MonoBehaviour
 
     protected void Die()
     {
-
+        GetComponent<ItemDropSystem>().Drop();
         //오브젝트 자기 자신을 제거한다
         Destroy(gameObject);
         Instantiate(destEffect, transform.position, Quaternion.identity);
@@ -254,6 +256,13 @@ public class EnemyFSM : MonoBehaviour
         //벡터값으로 넉백
     }
 
+    public float GetDistance() => Vector3.Distance(player.position, transform.position);
+
+    public void GetDamageToPlayer()
+    {
+        PlayerSystem.Instance.PlayerHP.TakeDamage = dmg;
+        Debug.Log(dmg);
+    }
 }
 
 

@@ -12,7 +12,7 @@ public class EnemyShieldHPBar : EnemyHPBar
     {
         base.Update();
 
-        shieldBar.fillAmount = enemyHP.CurrentSheild / enemyHP.MaxSheild;
+        shieldBar.fillAmount = enemyHP.CurrentShield / enemyHP.MaxShield;
 
 
     }

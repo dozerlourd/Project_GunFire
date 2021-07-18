@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1540432588401995522}
   - component: {fileID: 1540432588401995524}
   - component: {fileID: 1540432588401995550}
+  - component: {fileID: 630185711960274043}
   - component: {fileID: 1540432588401995521}
   - component: {fileID: 1540432588401995527}
   - component: {fileID: 1540432588401995551}
@@ -50,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_maxHP: 300
-  m_maxSheild: 0
+  m_maxShield: 0
   damageText: {fileID: 8904826618144217246, guid: c48f986f1928a0e429091de7e30dfcf0, type: 3}
 --- !u!114 &1540432588401995550
 MonoBehaviour:
@@ -65,12 +66,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destEffect: {fileID: 1273913214051363873, guid: c5dd65d57ebac6c43bf37566bc419fe0, type: 3}
-  rotSpeed: 20
   eState: 0
-  sightRange: 4
-  attackRange: 1
+  sightRange: 12
+  attackRange: 1.35
   attackPower: 30
-  delayTime: 1
+  attackDelayTime: 0.833
+  dmg: 7
+--- !u!114 &630185711960274043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540432588401995526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd748733edab80f42a515a1d8334aa99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItems:
+  - item: {fileID: 4145231351787655399, guid: 2c9d9c0a74a104e469a1711aa8b84589, type: 3}
+    weight: 1.5
+  - item: {fileID: 7388788318334580232, guid: 1acbff028b894a14c8039d08ac78d13a, type: 3}
+    weight: 62.5
+  - item: {fileID: 3394737462062735824, guid: ea057d79bfa8c1a47a4594f410cc3ac0, type: 3}
+    weight: 15
+  - item: {fileID: 0}
+    weight: 120
+  maxDropRepeat: 3
 --- !u!195 &1540432588401995521
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -81,10 +104,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.4
-  m_Speed: 3.5
-  m_Acceleration: 6
+  m_Speed: 5.5
+  m_Acceleration: 7
   avoidancePriority: 50
-  m_AngularSpeed: 150
+  m_AngularSpeed: 360
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -101,7 +124,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540432588401995526}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.39999998, z: 0.6}
@@ -760,6 +783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9088781207795007151}
   - component: {fileID: 9187208158783228539}
+  - component: {fileID: 1332445609270806463}
   m_Layer: 0
   m_Name: Polygonal Metalon Red
   m_TagString: Untagged
@@ -818,6 +842,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1332445609270806463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091112530962014589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9165bc28664c749a27700d9cfb69b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9091142183653019511
 GameObject:
   m_ObjectHideFlags: 0

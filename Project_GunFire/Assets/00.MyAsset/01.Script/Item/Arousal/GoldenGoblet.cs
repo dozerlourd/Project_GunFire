@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GoldenGoblet : ItemInfo
 {
+    public bool PressE = false;
     Coroutine co;
     [SerializeField] GameObject ArousalCanvas;
     void Start()
     {
         co = StartCoroutine(InputCheck());
+        E_ItemType = ItemType.GoldenGoblet;
     }
 
     IEnumerator InputCheck()
@@ -17,8 +19,4 @@ public class GoldenGoblet : ItemInfo
         ArousalCanvas.SetActive(true);
         StopCoroutine(co);
     }
-
-    protected override float GravityScale() => 0;
-
-    protected override Vector3 GravityDirection() => Vector3.zero;
 }
