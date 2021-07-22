@@ -41,6 +41,11 @@ public abstract class HPController : MonoBehaviour
 
     protected void Start()
     {
+        ResetHP();
+    }
+
+    protected void ResetHP()
+    {
         CurrentHP = MaxHP;
         CurrentShield = MaxShield;
     }

@@ -35,8 +35,10 @@ public class PlayerAttack : MonoBehaviour
             yield return new WaitUntil(() => currTimer >= coolTime); // 1.
             yield return new WaitUntil(() => AmmoCheck()); // 2. 재장전이 될 때까지 대기
             yield return new WaitUntil(() => Input.GetButton("Fire1")); // 3.
+
             if (weaponSystem.CurrWeapon.E_WeaponType == Weapon.WeaponType.Laser) SoundManager.Instance.WeaponSound(1.0f);
             else SoundManager.Instance.WeaponSound(0.3f);
+
             weaponSystem.CurrWeapon.currAmmo = Mathf.Clamp(--weaponSystem.CurrWeapon.currAmmo, 0, weaponSystem.CurrWeapon.maxAmmo); // 4.
             //if (!AmmoCheck()) yield return StartCoroutine(Reload()); //미장전 상태일 경우 (탄창에 현재 총알이 0일 경우) Reload 함수 실행
             Attack(GetFinalDamage()); // 5. 최종 데미지 계산 및 적에게 피해 적용 (Enemy에게 피해를 주는 로직은 구현 예정에 있음)
@@ -52,8 +54,10 @@ public class PlayerAttack : MonoBehaviour
             if (Co_Reload != null) StopCoroutine(Co_Reload);
             Co_Reload = StartCoroutine(Reload());
         }
-
-        // 안나와 ㅠㅠ //Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * Mathf.Infinity, Color.green);
+        //else if (Input.GetButtonDown("Fire1") && weaponSystem.CurrWeapon.currAmmo == 0)
+        //{
+        //    Co_Reload = StartCoroutine(Reload());
+        //}
     }
 
     /// <summary> 공격 딜레이를 계산하는 함수 </summary>
@@ -77,12 +81,6 @@ public class PlayerAttack : MonoBehaviour
     /// <returns>  현재 무기의 탄창에 남아있는 총알의 유무를 bool 값으로 반환 </returns>
     bool AmmoCheck()
     {
-        if (Input.GetButtonDown("Fire1") && weaponSystem.CurrWeapon.currAmmo == 0)
-        {
-            //SoundManager.Instance.EmptyAmmoSound(); // 비어있는 탄창 사운드
-            if (Co_Reload != null) StopCoroutine(Co_Reload);
-            Co_Reload = StartCoroutine(Reload());
-        }
         return weaponSystem.CurrWeapon.currAmmo != 0 ? true : false;
     }
 
@@ -95,6 +93,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack(float _dmg)
     {
+        if (Time.timeScale == 0) return;
         switch(weaponSystem.CurrWeapon.E_WeaponType)
         {
             case Weapon.WeaponType.Hitscan:

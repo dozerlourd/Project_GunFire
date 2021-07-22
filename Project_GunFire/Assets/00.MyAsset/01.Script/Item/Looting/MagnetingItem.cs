@@ -23,7 +23,7 @@ public class MagnetingItem : MonoBehaviour
             if (dist <= detectiveDist)
             {
                 if(!changeTrigger) { ChangeTrigger(); changeTrigger = true; }
-                transform.position = Vector3.Lerp(transform.position, player.position + new Vector3(0, -0.5f, 0), 0.02f);
+                transform.position = Vector3.Lerp(transform.position, player.position + new Vector3(0, -0.5f, 0), 0.05f);
             }
             yield return new WaitForEndOfFrame();
         }

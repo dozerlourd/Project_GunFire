@@ -11,6 +11,7 @@ public class PlayerHP : HPController
     Coroutine co_DamageCheck;
 
     [SerializeField] float repaireShieldScale = 5.0f;
+    Vector3 originPos;
 
     public override float TakeDamage
     {
@@ -45,6 +46,7 @@ public class PlayerHP : HPController
     new void Start()
     {
         base.Start();
+        originPos = transform.position;
         waitSeconds = new WaitForSeconds(Seconds);
         waitHealCooltime = new WaitForSeconds(HealCooltime);
         StartCoroutine(ShieldRepair());
@@ -65,7 +67,11 @@ public class PlayerHP : HPController
 
     protected override bool Damage(ref float setHP) => false;
 
-    protected override void Death(ref float setHP) { }
+    protected override void Death(ref float setHP)
+    {
+        transform.position = originPos;
+        ResetHP();
+    }
 
     protected override bool OverHeal(ref float setHP) => false;
 
